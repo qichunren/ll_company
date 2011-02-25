@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Login:</b>
+  <%= @admin.login %>
+</p>
+
+<p>
+  <b>Crypted password:</b>
+  <%= @admin.crypted_password %>
+</p>
+
+<p>
+  <b>True name:</b>
+  <%= @admin.true_name %>
+</p>
+
+<p>
+  <b>Last login at:</b>
+  <%= @admin.last_login_at %>
+</p>
+
+<p>
+  <b>Last login ip:</b>
+  <%= @admin.last_login_ip %>
+</p>
+
+<p>
+  <b>Login count:</b>
+  <%= @admin.login_count %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_path(@admin) %> |
+<%= link_to 'Back', admins_path %>

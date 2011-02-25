@@ -1,0 +1,33 @@
+<h1>Listing admins</h1>
+
+<table>
+  <tr>
+    <th>Login</th>
+    <th>Crypted password</th>
+    <th>True name</th>
+    <th>Last login at</th>
+    <th>Last login ip</th>
+    <th>Login count</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admins.each do |admin| %>
+  <tr>
+    <td><%= admin.login %></td>
+    <td><%= admin.crypted_password %></td>
+    <td><%= admin.true_name %></td>
+    <td><%= admin.last_login_at %></td>
+    <td><%= admin.last_login_ip %></td>
+    <td><%= admin.login_count %></td>
+    <td><%= link_to 'Show', admin %></td>
+    <td><%= link_to 'Edit', edit_admin_path(admin) %></td>
+    <td><%= link_to 'Destroy', admin, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Admin', new_admin_path %>

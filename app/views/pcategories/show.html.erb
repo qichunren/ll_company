@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @pcategory.name %>
+</p>
+
+<p>
+  <b>Parent:</b>
+  <%= @pcategory.parent_id %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @pcategory.position %>
+</p>
+
+
+<%= link_to 'Edit', edit_pcategory_path(@pcategory) %> |
+<%= link_to 'Back', pcategories_path %>

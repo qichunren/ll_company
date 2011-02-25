@@ -1,0 +1,112 @@
+/* Reset css */
+ul, li { margin:0; padding:0; list-style-position: inside; list-style-type: none; }
+p {margin:0; padding:0; }
+h1, h2, h3, h4, h5, h6 {margin:0; padding:0; font-weight: normal; }
+
+body{
+  background-color: #EFEFEF;
+  color: #666666;  
+  line-height: 23px;
+}
+#wrapper {
+  margin: 0 auto;
+  width: 950px;
+}  
+#content {
+  background:#FFF;
+  padding: 10px;
+}
+#sidebar {
+  width: 240px;
+  float:left ;
+}
+
+#main{width:700;margin-left:250px;}
+  
+.clear {height:1px; clear:both;}
+
+#header{ 
+  background: url(../images/header_bg.gif);
+  height: 158px;
+  margin-bottom:1px;
+  }
+  
+#nav {
+  height: 35px;  
+  background-color: #FF9900;
+  z-index: 333;
+}           
+
+#nav .menu {
+  position: relative;
+  z-index: 300;
+}   
+#nav .menu li {
+  display: inline-block;
+  height: 35px;
+  line-height: 35px;
+  background-color: #FF9900;
+  border-right: 1px dotted #333333;
+  color: #CCCCCC;
+  float: left;
+  padding: 0;
+  position: relative;
+  width: auto;
+  z-index: 1; 
+} 
+
+#nav .menu li a {
+  color: #FFF !important;
+  cursor: pointer;
+  display: block;
+  padding: 0 20px;   
+  font-weight: bold;
+  text-decoration: none;
+}
+  
+#footer{
+  margin-top:10px; 
+  padding-top: 10px; 
+  line-height: 30px;
+  text-align: center;
+  border-top: 2px solid #BDBDBD;
+}       
+  
+
+
+
+
+
+/* index page */
+#index_introduce {
+  
+}  
+
+#index_introduce h3 { border-bottom: 1px dashed #BDBDBD; margin-bottom:10px;}
+#index_introduce p {text-indent: 26px;   margin-bottom: 20px;}  
+
+/* product page */
+#product_categories h3{
+  border-bottom: 1px dashed #BDBDBD;  
+}                                   
+
+#product_categories .categories {
+  
+}
+
+#product_categories .categories li {
+  margin-bottom:5px;
+  border-bottom:1px dashed #BDBDBD;  
+} 
+.sub_category {
+  margin-left:10px;
+}      
+#index_latest_news h3{ border-bottom: 1px dashed #BDBDBD; margin-bottom:10px; }
+li.news {margin-bottom:6px;}
+li.news span{ display:block; float:right;}  
+
+
+/* pages page */
+#sidebar #page_items {margin-left: 10px; margin-right:20px;}
+#sidebar #page_items li {margin-bottom:10px;}
+#sidebar #page_items a{ display:block; padding:5px; border:1px solid #BDBDBD; text-decoration:none;}
