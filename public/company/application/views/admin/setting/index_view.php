@@ -4,7 +4,7 @@
 <?php echo form_open('admin/setting/update'); ?>
 
 <p>
-    <label for="company_introduce">公司简介</label><br /><textarea id="company_introduce" class="textarea" name="company_introduce"><?php echo $company_introduce;?></textarea></p>
+    <label for="company_introduce">公司简介</label><br /><textarea id="company_introduce" class="textarea" name="company_introduce" style="height:200px;width:600px;"><?php echo $company_introduce;?></textarea></p>
 <button type="submit">保存</button>
 </form>        
 </div>
