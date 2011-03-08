@@ -12,6 +12,7 @@
     .category a {padding:3px;display:block;}
     .sub_category{ padding-left:45px; border-bottom:1px dashed #BDBDBD; background:#FFF;} 
     .sub_category a{color:#000;padding:3px;display:block;}
+    .sub_category .f_r{ display: block; float: right;}
 </style>
 <script type="text/javascript">
     $(function(){ 
@@ -29,17 +30,18 @@
 <?php $categories = $this->product->get_root_categories(); ?>
 
 <div id="product_categories">
-<h3>产品分类</h3>
+<h3>产品分类</h3>  
+<?php echo $this->session->flashdata('flash'); ?>
 <ul class="categories">
 <?php foreach($categories as $category): ?>
   <li>
     <div class="category">
-     <?php echo anchor("/products/category/".$category->id, $category->name); ?>
+     <?php echo $category->name; ?>
   <?php $sub_categories = $this->product->get_child_category($category->id); ?>
     <?php foreach($sub_categories as $sub_category): ?>
         <div class="sub_category">
-            <?php echo anchor("/products/category/".$category->id."/".$sub_category->id, $sub_category->name); ?>
-            </div>
+            <span class="f_r"><a href="<?php echo site_url('/admin/products/delete_category/'.$sub_category->id); ?>">删除</a></span><?php echo anchor("/products/category/".$category->id."/".$sub_category->id, $sub_category->name); ?>
+        </div>
     <?php endforeach;?>     
     </div>        
   </li>

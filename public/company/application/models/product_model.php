@@ -43,6 +43,15 @@ class Product_model extends CI_Model {
     function get_child_category($id){
       $query = $this->db->query("select id, name from pcategories where parent_id=$id;");
       return $query->result();  
+    }    
+    
+    function delete_category($id){
+        $query = $this->db->query("delete from pcategories where id=$id and parent_id is not null;"); 
+        if($this->db->affected_rows()==0){
+            return false;
+        }else{
+            return true;
+        }
     }
     
     

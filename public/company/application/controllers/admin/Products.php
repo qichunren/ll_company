@@ -80,6 +80,16 @@ class Products extends MY_Controller {
             ); 
         $this->product->add_category($product_category);
         redirect("/admin/products/categories");   
+  	}     
+  	
+  	function delete_category($id){
+  	     $result = $this->product->delete_category($id);  
+  	     if($result){ 
+  	         $this->session->set_flashdata('flash', '分类已经删除成功');
+      	     redirect("/admin/products/categories");
+  	     }else{
+  	         redirect("/admin/products/categories");
+  	     }
   	}
 
   
