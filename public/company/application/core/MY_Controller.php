@@ -8,7 +8,6 @@ class MY_Controller extends CI_Controller {
     	parent::__construct();
     	// Write your own initialize code
     	if( $this->uri->segment(1) == "admin" ){
-    		$this->load->database();
       		$this->load->model("Admin_model", "admin");
       		if(!$this->admin->logged_in()){
       		    redirect('admin_login');  

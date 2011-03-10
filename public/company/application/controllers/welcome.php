@@ -11,8 +11,8 @@ class Welcome extends MY_Controller {
 
 	
     function index(){
-      $this->load->model("news_model", "news", TRUE);
-      $this->load->model("Setting_model", "setting", TRUE); 
+      $this->load->model("news_model", "news");
+      $this->load->model("Setting_model", "setting"); 
 
       $this->data["news"] = $this->news->get_latest_by_category(1, 3);
       $this->data["page_title"] = "首页 － 佳诚制冷工程设备";
