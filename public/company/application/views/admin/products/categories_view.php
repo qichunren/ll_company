@@ -36,8 +36,14 @@
 <?php foreach($categories as $category): ?>
   <li>
     <div class="category">
-     <?php echo $category->name; ?>
   <?php $sub_categories = $this->product->get_child_category($category->id); ?>
+  <?php if(count($sub_categories)== 0){ ?>
+        <span style="display:block;float:right;"><a href="<?php echo site_url('/admin/products/delete_category/'.$category->id); ?>">删除</a></span>
+    <?php } ?>
+    
+     <?php echo $category->name; ?>
+  
+  
     <?php foreach($sub_categories as $sub_category): ?>
         <div class="sub_category">
             <span class="f_r"><a href="<?php echo site_url('/admin/products/delete_category/'.$sub_category->id); ?>">删除</a></span><?php echo anchor("/products/category/".$category->id."/".$sub_category->id, $sub_category->name); ?>
@@ -65,4 +71,6 @@
         <button type="submit">提交</button>
     </form>  
     </div>
-</div>
+</div>         
+<div class="clear"></div>
+<span>分类删除后，原来此分类下的产品将变成未分类的状态！</span>

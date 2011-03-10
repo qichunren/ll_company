@@ -13,7 +13,7 @@ task :deploy do
   sh "sudo rm -rf #{target_path}"
   sh "sudo cp -r #{File.join(project_path, public_app_path)}  #{target_path}"  
   sh "sudo mkdir #{target_path}/uploads"
-  sh "sudo chmod 777 #{target_path}/uploads"
+  sh "sudo chmod -R 777 #{target_path}/uploads"
   sh "sudo chown -R qichunren #{target_path}"
   puts "Now you can visit http://127.0.0.1/#{app_name}"
 end 
@@ -33,6 +33,7 @@ namespace :ci do
   task :deploy do
     sh "sudo rm -rf /Applications/XAMPP/htdocs/company"
     sh "sudo ln -s  /Users/qichunren/code/ll_company/public/company/ /Applications/XAMPP/htdocs/company"
+    sh "sudo chmod -R 777 /Applications/XAMPP/htdocs/company/assets"
     sh "sudo chown -R qichunren /Applications/XAMPP/htdocs/company"
     puts "Now you can visit http://127.0.0.1/company"
   end

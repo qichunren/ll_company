@@ -45,8 +45,9 @@ class Product_model extends CI_Model {
       return $query->result();  
     }    
     
-    function delete_category($id){
-        $query = $this->db->query("delete from pcategories where id=$id and parent_id is not null;"); 
+    function delete_category($id){                   
+        $query = $this->db->query("update products set pcategory_id = null where pcategory_id=$id");
+        $query = $this->db->query("delete from pcategories where id=$id;");
         if($this->db->affected_rows()==0){
             return false;
         }else{

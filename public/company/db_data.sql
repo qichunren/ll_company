@@ -33,7 +33,7 @@ CREATE TABLE `admins` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,8 +42,65 @@ CREATE TABLE `admins` (
 
 LOCK TABLES `admins` WRITE;
 /*!40000 ALTER TABLE `admins` DISABLE KEYS */;
-INSERT INTO `admins` VALUES (1,'admin','e10adc3949ba59abbe56e057f20f883e','曹金华','2011-02-23 06:15:04','',0,'2011-02-22 13:05:49','2011-02-22 13:06:42');
+INSERT INTO `admins` VALUES (1,'admin','e10adc3949ba59abbe56e057f20f883e','管理员','2011-03-10 12:31:31','127.0.0.1',3,'2011-02-25 07:48:55','2011-02-25 07:48:55'),(2,'qichunren','e10adc3949ba59abbe56e057f20f883e','蕲春人','2011-02-25 07:48:55','127.0.0.1',0,'2011-02-25 07:48:55','2011-02-25 07:48:55');
 /*!40000 ALTER TABLE `admins` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `news`
+--
+
+DROP TABLE IF EXISTS `news`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `news` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `news_category_id` int(11) NOT NULL,
+  `content` text COLLATE utf8_unicode_ci NOT NULL,
+  `reading_count` int(11) DEFAULT '0',
+  `author` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `news`
+--
+
+LOCK TABLES `news` WRITE;
+/*!40000 ALTER TABLE `news` DISABLE KEYS */;
+INSERT INTO `news` VALUES (1,'公司开张了',1,'公司开张了, 欢迎访问。',0,'公司','2011-02-25 07:48:55','2011-02-25 07:48:55'),(2,'好消息',1,'公司开张了, 欢迎访问。',0,'公司','2011-02-25 07:48:55','2011-02-25 07:48:55'),(3,'ssssssssss',1,'<p>ssasasa</p>\n<script type=\"text/javascript\">// <![CDATA[\nalert(\"ffffffff\");\n// ]]></script>',0,'sss','2011-02-26 10:18:49',NULL);
+/*!40000 ALTER TABLE `news` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `news_categories`
+--
+
+DROP TABLE IF EXISTS `news_categories`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `news_categories` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `position` int(11) NOT NULL DEFAULT '0',
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `news_categories`
+--
+
+LOCK TABLES `news_categories` WRITE;
+/*!40000 ALTER TABLE `news_categories` DISABLE KEYS */;
+INSERT INTO `news_categories` VALUES (1,'公司新闻',0,'2011-02-25 07:48:55','2011-02-25 07:48:55'),(2,'行业新闻',0,'2011-02-25 07:48:55','2011-02-25 07:48:55');
+/*!40000 ALTER TABLE `news_categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -55,13 +112,13 @@ DROP TABLE IF EXISTS `pcategories`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `pcategories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `position` int(11) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,7 +127,7 @@ CREATE TABLE `pcategories` (
 
 LOCK TABLES `pcategories` WRITE;
 /*!40000 ALTER TABLE `pcategories` DISABLE KEYS */;
-INSERT INTO `pcategories` VALUES (1,'大分类1',NULL,1,'2011-02-22 09:22:09','2011-02-22 09:22:09'),(2,'大分类2',NULL,1,'2011-02-22 09:22:17','2011-02-22 09:22:17'),(3,'大分类3',NULL,1,'2011-02-22 09:22:26','2011-02-22 09:22:26'),(4,'大分类4',NULL,1,'2011-02-22 09:22:38','2011-02-22 09:22:38'),(5,'小分类11',1,1,'2011-02-22 09:22:57','2011-02-22 09:22:57'),(6,'小分类12',1,1,'2011-02-22 09:23:07','2011-02-22 09:23:07'),(7,'小分类13',1,1,'2011-02-22 09:23:22','2011-02-22 09:23:22'),(8,'小分类21',2,1,'2011-02-22 09:23:30','2011-02-22 09:23:30'),(9,'小分类31',3,1,'2011-02-22 09:23:40','2011-02-22 09:23:40'),(10,'小分类41',4,1,'2011-02-22 09:23:50','2011-02-22 09:23:50');
+INSERT INTO `pcategories` VALUES (31,'图书',0,NULL,'2011-03-10 12:46:13',NULL),(32,'计算机',31,NULL,'2011-03-10 12:46:44',NULL);
 /*!40000 ALTER TABLE `pcategories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -86,12 +143,12 @@ CREATE TABLE `products` (
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `target_url` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `image_url` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `category_id` int(11) NOT NULL,
+  `pcategory_id` int(11) NOT NULL,
   `click_count` int(11) NOT NULL DEFAULT '0',
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -100,7 +157,6 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (10,'asasasas','http://','/Applications/XAMPP/xamppfiles/htdocs/company/uploads/product.jpg',1,0,'2011-02-23 09:21:11',NULL);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -123,7 +179,7 @@ CREATE TABLE `schema_migrations` (
 
 LOCK TABLES `schema_migrations` WRITE;
 /*!40000 ALTER TABLE `schema_migrations` DISABLE KEYS */;
-INSERT INTO `schema_migrations` VALUES ('20110222081036'),('20110222081213'),('20110222130128'),('20110222143510');
+INSERT INTO `schema_migrations` VALUES ('20110222081036'),('20110222081213'),('20110222130128'),('20110222143510'),('20110223124718'),('20110223130709');
 /*!40000 ALTER TABLE `schema_migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -140,7 +196,8 @@ CREATE TABLE `settings` (
   `setting_value` text COLLATE utf8_unicode_ci,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `index_settings_on_setting_key` (`setting_key`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -150,7 +207,7 @@ CREATE TABLE `settings` (
 
 LOCK TABLES `settings` WRITE;
 /*!40000 ALTER TABLE `settings` DISABLE KEYS */;
-INSERT INTO `settings` VALUES (1,'company_introduce','我们公司。','2011-02-22 14:53:12','2011-02-22 14:53:12');
+INSERT INTO `settings` VALUES (1,'company_introduce','佳诚工程设备有限公司建于1996年，位于上海市普陀区金沙江路1340弄2号，是一家专业从事各种制冷设备的生产、安装、销售、售后服务为一体的中大型企业。佳诚公司主营溴化锂制冷机组、螺杆制冷机组、离心制冷机组、配套供应三洋、开利、双良、远大、乐星、联丰、荏原、深蓝等压缩机、冷剂泵、溴化锂溶液、电路板等系列配件。经营的项目主要有冷库、中央空调、速冻隧道、特殊制冷的设计、安装维修保养一条龙服务。 游戏机破解佳诚公司拥有一支技艺精良的技修队伍和雄厚的经济实力，曾获国家级“先进企业”荣誉称号。 当前，佳诚已立足于上海西南部地区，在全国享有很高的信誉。正筹备建造，开拓大规模的批发市场，力争在各个地区开办佳诚连锁店，以一流的产恐怖恐怖恐怖恐怖不','2011-02-25 07:48:55','2011-02-25 07:48:55');
 /*!40000 ALTER TABLE `settings` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -163,4 +220,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-02-23 17:38:26
+-- Dump completed on 2011-03-10 20:47:48

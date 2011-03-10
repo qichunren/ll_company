@@ -17,8 +17,8 @@
           <tr>                                      
               <td><?php echo $product->id; ?></td>
               <td><?php echo $product->name; ?></td>
-              <td><img src="<?php echo $product->image_url; ?>" /></td>
-              <td><?php echo anchor($product->target_url, "目标地址"); ?></td>
+              <td><img width="140" height='80' src="<?php echo $product->image_url; ?>" /></td>
+              <td><a href='<?php echo($product->target_url); ?>' target="_blank">目标地址</a></td>
               <td><?php echo $product->created_at;?></td> 
               <td>
                   <a href="<?php echo site_url('/admin/products/edit/'.$product->id); ?> ">修改</a> -
