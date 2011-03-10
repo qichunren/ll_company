@@ -3,5 +3,5 @@
     <b><?php echo $news->author; ?></b>于<?php echo $news->created_at; ?>发布
 </div>
 <div id="news_content">
-    <?php echo $news->content; ?>
+    <?php echo uhtml($news->content); ?>
 </div>

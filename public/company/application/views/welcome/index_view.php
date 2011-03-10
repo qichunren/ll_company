@@ -33,7 +33,7 @@
       <li class="news">
         <div>
           <span><?php echo $news_item->created_at; ?></span>
-          <?php echo anchor("/news/show/".$news_item->id, $news_item->title); ?>      
+          <?php echo anchor("/news/show/".$news_item->id, strip_tags($news_item->title)); ?>      
         </div>
       </li>
       <?php endforeach; ?>
