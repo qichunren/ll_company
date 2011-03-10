@@ -19,7 +19,8 @@ class Products extends MY_Controller {
           $this->load->model("product_model", "product");
           $this->data["query"] = $this->product->get($config["per_page"], $this->uri->segment(3));   
       
-          $this->data["categories"] = $this->product->get_root_categories();
+          $this->data["categories"] = $this->product->get_root_categories();  
+          $this->data["page_title"] = "产品中心 － 佳诚制冷工程设备";
           $this->render_view('products/index_view');  
 	  }  
 
