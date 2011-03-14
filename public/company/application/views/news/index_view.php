@@ -4,7 +4,7 @@
       
 </div>
 <div id="main">
-    <h2>公司新闻</h2>
+    <h2 class="page_title">公司新闻</h2>
     <div>
         <ul>
               <?php foreach($news as $news_item): ?>

@@ -1,5 +1,4 @@
 <div id="header">
-  
 </div>
 <div id="nav">
   <ul class="menu">

@@ -15,7 +15,6 @@
 
   </head>
   <body>
-    <div id="wrapper">
       <?php $this->load->view("/shared/header"); ?> 
       
       <div class="clear"></div>  
@@ -26,8 +25,7 @@
       
       <div class="clear"></div>
       
-      <?php $this->load->view("/shared/footer"); ?> 
-    </div>
+      <?php $this->load->view("/shared/footer"); ?>
 
   </body>
 </html>
