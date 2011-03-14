@@ -18,7 +18,8 @@ class Admin_model extends CI_Model {
         return $query->row(); 
     }                                  
     
-    function get($limit, $offset){
+    function get($limit, $offset){  
+        $this->db->order_by("login", "asc");
       $query = $this->db->get("admins", $limit, $offset);
       return $query->result();  
     }   

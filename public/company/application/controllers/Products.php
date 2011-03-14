@@ -6,7 +6,6 @@ class Products extends MY_Controller {
 	{
 		parent::__construct();
 		// Write your own initialize code
-		$this->load->database();
 		// $this->load->helper("url");
 	}   
 	
@@ -37,18 +36,17 @@ class Products extends MY_Controller {
     }
   
     function show($id){
-      // $this->load->library("pagination");
-      // $config["base_url"] = site_url("products/show");
-      // $config["total_rows"] = $this->db->count_all("posts");
-      // $conifig["per_page"] = "5";
-      // $this->pagination->initialize($config);
-      // $this->load->model("post_model", "post", TRUE);
-      // $data["query"] = $this->post->get($config["per_page"], $this->uri->segment(3));
-      // $this->load->view('products/show_view', $data);
-      
-      $this->load->view('products/show_view');
+        $this->load->model("product_model", "product");
+        $this->data["product"] = $this->product->get_by_id($id);      
+        $this->render_view('products/show_view');
+    }  
+    
+    function search($id){    
+        $this->load->model("product_model", "product");                      
+        $data["q"] = $this->product->search($id); 
+        $this->render_view('products/search_view');                
     }
-  
+   
    
   
   

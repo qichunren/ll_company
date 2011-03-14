@@ -1,11 +1,8 @@
-<html>
-<head> 
-  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Products - </title>
-  <meta name="description" content="CodeIgniter Vender" />
-  <meta name="keywords"  content="qichunren php codeigniter" />
-</head>
-<body>
-	<h1>Welcome to Products !</h1>
-</body>
-</html>
+<h2><?php echo strip_tags($product->name); ?></h2> 
+<div id="news_meta">
+    <b><?php echo strip_tags($product->c_name); ?></b>于<?php echo $product->created_at; ?>发布
+</div>
+<div id="news_content">
+    <?php echo uhtml($product->introduce); ?> 
+    <a href="<?php echo $product->target_url; ?>">查看此产品详情</a>
+</div>

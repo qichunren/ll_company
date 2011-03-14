@@ -19,9 +19,9 @@
         <?php foreach($news as $item): ?>
           <tr>         
               <td><?php echo $item->id; ?></td>
-              <td><?php echo $item->category_name; ?></td>
-              <td><?php echo $item->title; ?></td>
-              <td><?php echo $item->author; ?></td>
+              <td><?php echo strip_tags($item->category_name); ?></td>
+              <td><?php echo anchor("/news/show/".$item->id, strip_tags($item->title), "target='_blank'"); ?></td>  
+              <td><?php echo strip_tags($item->author); ?></td>
               <td align="center"><?php echo $item->reading_count; ?></td>
               <td align="center"><?php echo $item->created_at;?></td>
               <td align="center">

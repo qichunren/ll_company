@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(:version => 20110223130709) do
 
   create_table "products", :force => true do |t|
     t.string   "name",                        :null => false
+    t.text     "introduce"
     t.string   "target_url",                  :null => false
     t.string   "image_url",                   :null => false
     t.integer  "pcategory_id",                :null => false

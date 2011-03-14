@@ -25,6 +25,9 @@ echo $this->upload->display_errors();
     <p><label for="userfile">图片文件</label>
         <input type="file" id="userfile" name="userfile" size="20" />
     </p>
+    <p><label for="product_introduce">产品简要描述：</label>
+        <textarea type="file" id="product_introduce" name="product_introduce" size="20"></textarea>
+    </p>
     <button type="submit">提交</button>
 </form>                  
 </div>

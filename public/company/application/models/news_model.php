@@ -22,7 +22,7 @@ class News_model extends CI_Model {
     function get($limit, $offset=0){
       // $query = $this->db->get("news", $limit, $offset);
       if($offset == "")$offset = 0;
-      $query = $this->db->query("SELECT news.id, title, author, reading_count, news.created_at,news_categories.name as category_name FROM news inner join news_categories on news_categories.id = news.news_category_id  LIMIT $offset, $limit");
+      $query = $this->db->query("SELECT news.id, title, author, reading_count, news.created_at,news_categories.name AS category_name FROM news inner join news_categories on news_categories.id = news.news_category_id  ORDER BY id DESC LIMIT $offset, $limit");
       return $query->result();  
     }       
     

@@ -7,7 +7,13 @@ class Product_model extends CI_Model {
     function __construct(){
         parent::__construct();
         //  Write your own initialize code
-    }                                    
+    }   
+    
+    function get_by_id($id){
+        $sql = "select p.id, p.name, p.image_url, p.target_url, c.name as c_name, p.created_at, p.introduce from products p left join pcategories c on c.id=p.pcategory_id where p.id=".$id;
+        $query = $this->db->query($sql);
+        return $query->row();
+    }                                 
     
     function get($limit, $offset){  
         if(strlen($offset) == 0){ $offset = 0;}
@@ -55,6 +61,11 @@ class Product_model extends CI_Model {
         }else{
             return true;
         }
+    }
+    
+    function search($keywords){
+        $query = $this->db->query("select * from products where name like '%$keywords%'");
+        return $query->result();        
     }
     
     

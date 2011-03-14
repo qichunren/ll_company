@@ -14,7 +14,7 @@
 <div id="main">
   <div id="index_introduce">
     <h3>公司介绍</h3>
-    <p><?php echo $company_introduce; ?></p>
+    <p><?php echo uhtml($company_introduce); ?></p>
   </div>  
   
   <div id="index_slider">

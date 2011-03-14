@@ -1,21 +1,26 @@
 /* Reset css */
 ul, li { margin:0; padding:0; list-style-position: inside; list-style-type: none; }
 p {margin:0; padding:0; }
-h1, h2, h3, h4, h5, h6 {margin:0; padding:0; font-weight: normal; }
+h1, h2, h3, h4, h5, h6 {margin:0; padding:0; font-weight: normal; }      
+
+a img { border: 0 none;}
 
 body{
   background-color: #EFEFEF;
   color: #666666;  
   line-height: 23px;
-}
+}     
+
 #wrapper {
   margin: 0 auto;
   width: 950px;
 }  
+
 #content {
   background:#FFF;
   padding: 10px;
 }
+
 #sidebar {
   width: 240px;
   float:left ;

@@ -1,7 +1,8 @@
 class CreateProducts < ActiveRecord::Migration
   def self.up
     create_table :products do |t|
-      t.string :name, :null => false
+      t.string :name, :null => false      
+      t.text   :introduce
       t.string :target_url, :null => false
       t.string :image_url, :null => false
       t.integer :pcategory_id, :null => false

@@ -11,7 +11,7 @@ class News extends MY_Controller {
   	function index(){   
   	    $this->load->library("pagination");  
         $config["base_url"] = site_url("/admin/news/index");
-        $config["total_rows"] = $this->db->count_all("news"); 
+        $config["total_rows"] = $this->db->count_all("news");
         $config['uri_segment'] = 4;
         $config["per_page"] = "3";
 
