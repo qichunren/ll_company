@@ -20,7 +20,7 @@ class News extends MY_Controller {
         $this->load->model("news_model", "news");
         $this->data["news"] = $this->news->get($config["per_page"], $this->uri->segment(3));   
 
-        $this->data["page_title"] = "产品中心 － 佳诚制冷工程设备";
+        $this->data["page_title"] = "公司新闻 － 佳诚制冷工程设备";
         $this->render_view('news/index_view');
 	      
 	} 
@@ -34,7 +34,7 @@ class News extends MY_Controller {
         $this->load->model("news_model", "news");
         $this->data["news"] = $this->news->get($config["per_page"], $this->uri->segment(3));   
 
-        $this->data["page_title"] = "产品中心 － 佳诚制冷工程设备";
+        $this->data["page_title"] = "行业新闻 － 佳诚制冷工程设备";
         $this->render_view('news/industry_view');
 	    
 	}

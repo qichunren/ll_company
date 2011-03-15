@@ -22,11 +22,12 @@ echo $this->upload->display_errors();
             <?php endforeach; ?>
         </select>
     </p>  
-    <p><label for="userfile">图片文件</label>
-        <input type="file" id="userfile" name="userfile" size="20" />
+    <p><label for="userfile">图片：</label>
+        <input type="file" id="userfile" name="userfile" size="20" /><br />
+        <span style="font-size:11px;margin-left:30px;">为保证最佳图片显示效果，请确定你的图片尺寸为 宽190＊高200</span>
     </p>
-    <p><label for="product_introduce">产品简要描述：</label>
-        <textarea type="file" id="product_introduce" name="product_introduce" size="20"></textarea>
+    <p><label for="product_introduce">产品简要描述：</label><br />
+        <textarea type="file" id="product_introduce" name="product_introduce" style="width:300px;height:80px;"></textarea>
     </p>
     <button type="submit">提交</button>
 </form>                  

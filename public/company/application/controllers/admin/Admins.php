@@ -27,9 +27,9 @@ class Admins extends MY_Controller {
   	
   	function create(){  
   	    $admin = array(
-                'login' => $this->input->post("admin_login") ,
-                'true_name' => $this->input->post("admin_true_name") ,
-                'crypted_password' => md5($this->input->post("admin_password")),
+                'login' => strip_tags($this->input->post("admin_login")),
+                'true_name' => strip_tags($this->input->post("admin_true_name")),
+                'crypted_password' => md5(strip_tags($this->input->post("admin_password"))),
                 'created_at' => date('YmdHis')
             ); 
         $this->admin->add($admin);

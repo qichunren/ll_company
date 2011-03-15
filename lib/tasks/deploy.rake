@@ -19,7 +19,18 @@ task :deploy do
 end 
 
 task :xampp do
-  sh "sudo /Applications/XAMPP/xamppfiles/xampp restart"
+  sh "sudo /Applications/XAMPP/xamppfiles/xampp restart"     
+  
+  project_path = File.expand_path("../..", File.dirname(__FILE__))
+  public_app_path = YAML.load_file(File.join( File.expand_path("../..", File.dirname(__FILE__)), "config/codeigniter.yml"))["path"]
+  app_name = public_app_path.split("/")[1]                 
+  target_path = "/Applications/XAMPP/htdocs/#{app_name}"
+  
+  db_config = YAML.load_file(File.join( File.expand_path("../..", File.dirname(__FILE__)), "config/database.yml"))["development"]
+  db_name = db_config["database"]
+  db_user = db_config["username"]
+  db_password = db_config["password"]
+  sh "/Applications/XAMPP/xamppfiles/bin/mysqldump -h 127.0.0.1  -u #{db_user} -p#{db_password}  --skip-add-locks #{db_name}  >  #{File.join(project_path, public_app_path, 'db_data.sql')} "
 end        
 
 task :dbreset do

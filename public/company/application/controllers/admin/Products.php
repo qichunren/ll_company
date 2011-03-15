@@ -41,9 +41,9 @@ class Products extends MY_Controller {
         }else{   
             $upload_data = $this->upload->data();    
             $product = array(
-                    'name' => $this->input->post("product_name") ,
-                    'target_url' => $this->input->post("product_target_url") ,
-                    'pcategory_id' => $this->input->post("category_id"),
+                    'name' => strip_tags($this->input->post("product_name")),
+                    'target_url' => strip_tags($this->input->post("product_target_url")),
+                    'pcategory_id' => strip_tags($this->input->post("category_id")),
                     'introduce' => $this->input->post("product_introduce"), 
                     'image_url'   => base_url()."assets/uploads/products/".$upload_data["file_name"],
                     'created_at' => date('YmdHis')

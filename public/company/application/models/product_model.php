@@ -18,7 +18,7 @@ class Product_model extends CI_Model {
     function get($limit, $offset){  
         if(strlen($offset) == 0){ $offset = 0;}
       //$query = $this->db->get("products", $limit, $offset);
-      $query = $this->db->query("select p.id, p.name, p.image_url, p.target_url, c.name as c_name, p.created_at from products p left join pcategories c on c.id=p.pcategory_id  limit $offset, $limit");
+      $query = $this->db->query("select p.id, p.name, p.image_url, p.target_url, c.name as c_name, p.created_at from products p left join pcategories c on c.id=p.pcategory_id  order by id DESC limit $offset, $limit");
       return $query->result();  
     }       
     

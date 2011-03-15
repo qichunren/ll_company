@@ -13,7 +13,7 @@ class Products extends MY_Controller {
 	      $this->load->library("pagination");
           $config["base_url"] = site_url("products/index");
           $config["total_rows"] = $this->db->count_all("products");
-          $config["per_page"] = "3";
+          $config["per_page"] = "9";
           $this->pagination->initialize($config);
           $this->load->model("product_model", "product");
           $this->data["query"] = $this->product->get($config["per_page"], $this->uri->segment(3));   
