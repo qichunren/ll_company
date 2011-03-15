@@ -10,7 +10,7 @@ class Product_model extends CI_Model {
     }   
     
     function get_by_id($id){
-        $sql = "select p.id, p.name, p.image_url, p.target_url, c.name as c_name, p.created_at, p.introduce from products p left join pcategories c on c.id=p.pcategory_id where p.id=".$id;
+        $sql = "select p.id, p.name, p.image_url, p.target_url, c.name as c_name, p.pcategory_id, p.created_at, p.introduce from products p left join pcategories c on c.id=p.pcategory_id where p.id=".$id;
         $query = $this->db->query($sql);
         return $query->row();
     }                                 
@@ -24,6 +24,11 @@ class Product_model extends CI_Model {
     
     function add($data){
           $this->db->insert('products', $data);    
+    }   
+    
+    function update($id, $data){
+        $this->db->where('id', $id);
+        $this->db->update('products', $data);
     }
     
     function delete($id){

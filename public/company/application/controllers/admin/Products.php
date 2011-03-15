@@ -56,13 +56,20 @@ class Products extends MY_Controller {
   	} 
   	
   	function edit($id){
-        $this->data["news"] = $this->product->get_by_id($id);      
-        $this->render_view('/admin/news/edit_view', 'admin');
+        $this->data["product"] = $this->product->get_by_id($id);      
+        $this->render_view('/admin/products/edit_view', 'admin');
   	    
   	}  
   	
-  	function update(){
-      	  redirect("/admin/products");    
+  	function update(){   
+  	    $product_data = array(
+                'name' => strip_tags($this->input->post("product_name")),
+                'target_url' => strip_tags($this->input->post("product_target_url")),
+                'pcategory_id' => strip_tags($this->input->post("category_id")),
+                'introduce'    => $this->input->post("product_introduce")
+            );
+        $this->product->update(strip_tags($this->input->post("product_id")), $product_data); 
+      	redirect("/admin/products");    
   	} 
   	
   	function delete($id){ 

@@ -50,8 +50,7 @@ class News extends MY_Controller {
               'content'    => $this->input->post("news_content")
           );
       $this->news->update(strip_tags($this->input->post("news_id")), $news_data); 
-      redirect("/admin/news");
-           
+      redirect("/admin/news");     
   	}
   	
   	function delete($id){    
