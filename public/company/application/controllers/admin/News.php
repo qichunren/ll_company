@@ -27,9 +27,9 @@ class News extends MY_Controller {
   	
   	function create(){
   	    $news = array(
-                'title' => $this->input->post("news_title") ,
-                'author' => $this->input->post("news_author") ,
-                'news_category_id' => $this->input->post("news_category_id"),
+                'title' => strip_tags($this->input->post("news_title")),
+                'author' => strip_tags($this->input->post("news_author")) ,
+                'news_category_id' => strip_tags($this->input->post("news_category_id")),
                 'content'    => $this->input->post("news_content"),
                 'created_at' => date('YmdHis')
             ); 
@@ -37,9 +37,22 @@ class News extends MY_Controller {
         redirect("/admin/news");
   	}
   	
-  	function edit(){
-  	    
-  	}       
+  	function edit($id){
+        $this->data["news"] = $this->news->get_by_id($id);      
+        $this->render_view('/admin/news/edit_view', 'admin');  
+  	}                                                        
+  	
+  	function update(){
+  	  $news_data = array(
+              'title' => strip_tags($this->input->post("news_title")),
+              'author' => strip_tags($this->input->post("news_author")),
+              'news_category_id' => strip_tags($this->input->post("news_category_id")),
+              'content'    => $this->input->post("news_content")
+          );
+      $this->news->update(strip_tags($this->input->post("news_id")), $news_data); 
+      redirect("/admin/news");
+           
+  	}
   	
   	function delete($id){    
   	    $this->db->where('id', $id);

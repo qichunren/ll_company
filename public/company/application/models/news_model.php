@@ -9,7 +9,7 @@ class News_model extends CI_Model {
     }  
     
     function get_by_id($id){
-        $sql = "SELECT news.id, news.title, news.author, news.content, news.created_at FROM news where news.id=".$id." LIMIT 1";
+        $sql = "SELECT news.id, news.title, news.author, news.content, news.news_category_id, news.created_at FROM news where news.id=".$id." LIMIT 1";
         $query = $this->db->query($sql);
         return $query->row(); 
     }  
@@ -28,6 +28,11 @@ class News_model extends CI_Model {
     
     function add($data){
           $this->db->insert('news', $data);    
+    }  
+    
+    function update($id, $data){
+        $this->db->where('id', $id);
+        $this->db->update('news', $data);
     }
     
     function get_categories(){
