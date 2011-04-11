@@ -9,7 +9,7 @@ class Admin_Login extends MY_Controller {
   		$this->load->database();
   	}
   	
-  	function index($message = null){         
+  	function index($message = NULL){         
   	  $data = array( 'message' => $message );
   	  $this->load->view("login_view", $data);
   	}   
@@ -18,10 +18,8 @@ class Admin_Login extends MY_Controller {
   	  $this->load->model("Admin_model", "admin");
   	  $login_result = $this->admin->do_login();
 
-  		if($login_result !== TRUE)
-  			$this->index($login_result);
-  		else
-  			redirect('admin/dashboard');
+  		if($login_result !== TRUE) $this->index($login_result);
+  		else redirect('admin/dashboard');
   	}
   	
   	function out(){ 

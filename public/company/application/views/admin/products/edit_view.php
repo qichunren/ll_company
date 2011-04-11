@@ -7,7 +7,7 @@ echo $this->upload->display_errors();
 
 <div class="box">                                                             
     <div style="float:right;margin:10px;border:2px solid #BDBDBD;">
-        <img width="140" height='80' src="<?php echo $product->image_url; ?>" /> 
+        <img width="140" height='80' src="<?php echo base_url().$product->image_url; ?>" /> 
     </div>
 <?php echo form_open_multipart('admin/products/update', "id='edit_form'"); ?> 
 <input type="hidden" name="product_id" value="<?php echo $product->id; ?>" /> 

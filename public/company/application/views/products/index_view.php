@@ -40,7 +40,7 @@
       <ul>
           <?php foreach($query as $item): ?>
             <li style="display: block; border:0px solid #BDBDBD;padding: 10px;margin-right: 15px;margin-bottom:10px;float:left;text-align:center">
-                <a  href="<?php echo site_url('/products/show/'.$item->id);?>" ><img width="190" height="200" style="" src="<?php echo $item->image_url; ?>" /></a>
+                <a  href="<?php echo site_url('/products/show/'.$item->id);?>" ><img width="190" height="200" style="" src="<?php echo base_url().$item->image_url; ?>" /></a>
                 <?php echo anchor("/products/show/".$item->id, strip_tags($item->name), "style='display:block'"); ?>
             </li>
           <?php endforeach; ?> 

@@ -82,23 +82,26 @@ $db['test']['stricton'] = FALSE;
 
 
 /** MySQL主机名 */
-// if( !isset( $_SERVER['HTTP_MYSQLPORT'] ) || $_SERVER['HTTP_MYSQLPORT'] ==0 ) $_SERVER['HTTP_MYSQLPORT'] = 3307;
-// 
-// $db['production']['hostname'] = $_SERVER['HTTP_MYSQLPORT'] . '.mysql.sae.sina.com.cn:' . $_SERVER['HTTP_MYSQLPORT'];
-// $db['production']['username'] = $_SERVER['HTTP_ACCESSKEY'];
-// $db['production']['password'] = $_SERVER['HTTP_SECRETKEY'];
-// $db['production']['database'] = 'app_' . $_SERVER['HTTP_APPNAME'];
-// $db['production']['dbdriver'] = 'mysql';
-// $db['production']['dbprefix'] = '';
-// $db['production']['pconnect'] = TRUE;
-// $db['production']['db_debug'] = TRUE;
-// $db['production']['cache_on'] = FALSE;
-// $db['production']['cachedir'] = '';
-// $db['production']['char_set'] = 'utf8';
-// $db['production']['dbcollat'] = 'utf8_general_ci';
-// $db['production']['swap_pre'] = '';
-// $db['production']['autoinit'] = TRUE;
-// $db['production']['stricton'] = FALSE; 
+if( !isset( $_SERVER['HTTP_MYSQLPORT'] ) || $_SERVER['HTTP_MYSQLPORT'] ==0 ) $_SERVER['HTTP_MYSQLPORT'] = 3307;
+
+if($active_group == "production"){
+$db['production']['hostname'] = $_SERVER['HTTP_MYSQLPORT'] . '.mysql.sae.sina.com.cn:' . $_SERVER['HTTP_MYSQLPORT'];
+$db['production']['username'] = $_SERVER['HTTP_ACCESSKEY'];
+$db['production']['password'] = $_SERVER['HTTP_SECRETKEY'];
+$db['production']['database'] = 'app_' . $_SERVER['HTTP_APPNAME'];
+$db['production']['dbdriver'] = 'mysql';
+$db['production']['dbprefix'] = '';
+$db['production']['pconnect'] = FALSE;
+$db['production']['db_debug'] = TRUE;
+$db['production']['cache_on'] = FALSE;
+$db['production']['cachedir'] = '';
+$db['production']['char_set'] = 'utf8';
+$db['production']['dbcollat'] = 'utf8_general_ci';
+$db['production']['swap_pre'] = '';
+$db['production']['autoinit'] = TRUE;
+$db['production']['stricton'] = FALSE;   
+
+}
 /* End of production mode */
 
 

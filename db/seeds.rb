@@ -5,7 +5,7 @@ DatabaseCleaner.strategy = :truncation
 # then, whenever you need to clean the DB
 DatabaseCleaner.clean
 
-Admin.create([
+Admin.create!([
   {
     :login => "admin",
     :crypted_password => "123456",

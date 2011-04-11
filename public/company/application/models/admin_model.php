@@ -32,16 +32,13 @@ class Admin_model extends CI_Model {
 
         $row = $query->row();
   		 
-    		if($row->id == null) {
-    		  return "帐号或密码不正确.";
-    		}else{
-    		  if($row->crypted_password != md5($this->input->post('admin_password')) ){
-    		    return "帐号或密码不正确.";    
-    		  }
+    		if($row == NULL or $row->id == NULL) {
+    		    return "帐号或密码不正确.";
     		}
-		
-        // if($row->active != 'on')
-        //  return "Your account has been suspended. Please <a href='/contact'><u>contact us</u></a> for more info.";
+    		
+    		if($row->crypted_password != md5($this->input->post('admin_password')) ){
+    		    return "帐号或密码不正确.";    
+    		}
 		
     		//set session variables
     		$this->session->set_userdata('admin_id', $row->id);

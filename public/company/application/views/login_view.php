@@ -19,10 +19,10 @@
             <?php echo $message; ?>
           </div>
       <?php } ?>
-      <?php echo form_open('admin_login/do_login'); ?>
+      <?php echo form_open('admin_login/do_login', "id='login_form' onsubmit='return check_form();' "); ?>
         <p><label for="admin_login">帐号：</label><input type="text" id="admin_login" name="admin_login" /></p>
         <p><label for="admin_password">密码：</label><input type="password" id="admin_password" name="admin_password" /></p>
-        <button type="submit">登录</button>
+        <button id="login_button" type="submit">登录</button>
       </form>  
       <div id="footer">
       <p>&copy; 2011 上海佳诚工程设备有限公司</p>
@@ -30,5 +30,22 @@
       </div>
       
     </div>
+    
+    <script type="text/javascript">
+        document.getElementById("admin_password").value = " ";
+        document.getElementById("admin_login").focus(); 
+        
+        function check_form(){ 
+            if(document.getElementById("admin_login").value.length == 0){
+                document.getElementById("admin_login").focus();
+                return false;
+            }
+            if(document.getElementById("admin_password").value.length == 0){
+                document.getElementById("admin_password").focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
   </body>
 </html>
