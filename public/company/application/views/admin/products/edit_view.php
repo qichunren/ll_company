@@ -17,13 +17,13 @@ echo $this->upload->display_errors();
         <select id="category_id" name="category_id"> 
             <?php $categories = $this->product->get_root_categories(); ?>
             <?php foreach($categories as $category): ?>   
-                <optgroup label="<?php echo $category->name; ?>">
+                <option value="<?php echo $category->id; ?>"><?php echo $category->name; ?></option>
                  
               <?php $sub_categories = $this->product->get_child_category($category->id); ?>
                 <?php foreach($sub_categories as $sub_category): ?>
-                    <option value="<?php echo $sub_category->id; ?>"  <?php if($sub_category->id == $product->pcategory_id)echo "selected"; ?> ><?php echo $sub_category->name; ?></option>
+                    <option value="<?php echo $sub_category->id; ?>"  <?php if($sub_category->id == $product->pcategory_id)echo "selected"; ?> >-----<?php echo $sub_category->name; ?></option>
                 <?php endforeach;?> 
-                </optgroup>    
+   
             <?php endforeach; ?>
         </select>
     </p>  
