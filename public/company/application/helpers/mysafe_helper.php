@@ -15,6 +15,10 @@ function uhtml($str)
    ); 
   $str = preg_replace( $farr,$tarr,$str); 
    return $str; 
+}    
+
+function show_category($product){
+    if(strlen($product->c_name)==0){return "未分类";}else{return $product->c_name;}
 }
 
 ?>

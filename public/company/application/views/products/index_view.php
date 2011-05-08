@@ -16,15 +16,16 @@
   <div id="product_categories" style="border:2px solid #95CFEF">
   <h3 style="background:#95CFEF;color:#FFF;padding:4px;">产品分类</h3>
   <div class="categories">
+  <?php $categories = $this->product->get_root_categories(); ?>
   <?php foreach($categories as $category): ?>
     <dl style="border-bottom:1px dashed #BDBDBD;padding:5px;">
       <dt class="category" style="font-weight:bold;">
-       <?php echo anchor("/products/category/".$category->id, strip_tags($category->name)); ?> 
+       <?php echo anchor("/products/category/0/".$category->id, strip_tags($category->name)); ?> 
        </dt>
     <?php $sub_categories = $this->product->get_child_category($category->id); ?>
       <dd class="sub_category">
       <?php foreach($sub_categories as $sub_category): ?>
-         <?php echo anchor("/products/category/".$category->id."/".$sub_category->id, strip_tags($sub_category->name)); ?> - 
+         <?php echo anchor("/products/category/0/".$category->id."/".$sub_category->id, strip_tags($sub_category->name)); ?> - 
       <?php endforeach; ?> 
       </dd>      
     </dl>

@@ -20,7 +20,39 @@ class Product_model extends CI_Model {
       //$query = $this->db->get("products", $limit, $offset);
       $query = $this->db->query("select p.id, p.name, p.image_url, p.target_url, c.name as c_name, p.created_at from products p left join pcategories c on c.id=p.pcategory_id  order by id DESC limit $offset, $limit");
       return $query->result();  
-    }       
+    }
+    
+    function get_count_from_root_category($category_id){  
+       $sub_categories = $this->db->query("select c.id from pcategories c where c.parent_id=".$category_id)->result();
+       $sub_categories_array = array();
+       foreach($sub_categories as $row){
+           array_push($sub_categories_array, $row->id);
+       }
+       $sub_categories_string = join(',', $sub_categories_array);
+       $category_conditions = "in ($category_id, $sub_categories_string)";
+       return $this->db->query("select count(id) as total_count from products p where p.pcategory_id $category_conditions")->row()->total_count;
+    }  
+    
+    function get_count_from_sub_category($category_id){
+        return $this->db->query("select count(id) as total_count from products p where p.pcategory_id=".$category_id)->row()->total_count;
+    }
+    
+    function get_from_categories($limit, $offset, $categories){
+        if(count($categories)== 1){ // 从一级分类过来的
+            $sub_categories = $this->db->query("select c.id from pcategories c where c.parent_id=".$categories[0])->result(); 
+            $sub_categories_array = array();
+            foreach($sub_categories as $row){
+                array_push($sub_categories_array, $row->id);
+            }
+            $sub_categories_string = join(',', $sub_categories_array);
+            $category_conditions = "in ($categories[0], $sub_categories_string)";
+        }elseif(count($categories)== 2){ // 从二级分类
+            $category_conditions = "= ".$categories[1];
+        }  
+        if(strlen($offset) == 0){ $offset = 0;}
+      $query = $this->db->query("select p.id, p.name, p.image_url, p.target_url, c.name as c_name, p.created_at from products p left join pcategories c on c.id=p.pcategory_id where p.pcategory_id $category_conditions  order by id DESC limit $offset, $limit");
+      return $query->result();  
+    }    
     
     function add($data){
           $this->db->insert('products', $data);    
