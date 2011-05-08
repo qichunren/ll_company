@@ -23,7 +23,7 @@
        <?php echo anchor("/products/category/".$category->id, strip_tags($category->name)); ?> 
        </dt>
     <?php $sub_categories = $this->product->get_child_category($category->id); ?>
-      <dd class="sub_category">
+      <dd class="sub_category">       
       <?php foreach($sub_categories as $sub_category): ?>
          <?php echo anchor("/products/scategory/".$category->id."/".$sub_category->id, strip_tags($sub_category->name)); ?> - 
       <?php endforeach; ?> 
