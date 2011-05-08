@@ -3,7 +3,17 @@
         <ul>
            <?php $this->load->view("pages/page_items_part");?>
         </ul>
-      </div>
+  </div>
+  
+  <div id="contact_info">
+      地 址： 上海金沙江路1340弄2号<br />
+      电 话： 021-52652192<br />
+      传 真： 021-52804468<br />
+      联 系 人： 何炯成（经理） <br />
+      手 机： 13901610575 <br />
+      邮 箱： jczlsb@yahoo.cn <br />
+  </div>
+  <div class="clear"></div>
       
 </div>
 <div id="main">
@@ -22,5 +32,6 @@
 <p>佳诚企业目标：全球最优秀的冷冻配件经销商之一</p>
 
 
-    </div>
+    </div> 
+    <div class="clear"></div>
 </div>

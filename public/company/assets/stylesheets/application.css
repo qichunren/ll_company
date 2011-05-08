@@ -31,7 +31,7 @@ body{
   float:left ;
 }
 
-#main{width:700;margin-left:250px;}  
+#main{width:700;margin-left:250px;min-height: 400px;}  
 #main .page_title {margin-bottom:10px; font-size:18px; padding-bottom: 8px;border-bottom:1px solid #AFD4FF; color:#5FA8FF;}
   
 .clear {height:1px; clear:both;}
@@ -107,7 +107,14 @@ body{
 /* index page */
 #index_introduce {
   
-}  
+}   
+
+#contact_info {             
+  margin: 2px;
+   padding: 10px;
+   border: 1px solid #BDBDBD;
+   
+}
 
 #index_introduce h3 { border-bottom: 1px dashed #BDBDBD; margin-bottom:10px;}
 #index_introduce p {text-indent: 26px;   margin-bottom: 20px;}  
@@ -138,6 +145,6 @@ li.products span{ display:block; float:right;}
 
 
 /* pages page */
-#sidebar #page_items {margin-left: 10px; width:180px; margin-right:20px; border-right: 1px solid #5FA8FF;}
+#sidebar #page_items { border-right: 1px solid #5FA8FF;}
 #sidebar #page_items li {margin-bottom:10px; text-align: center;}
 #sidebar #page_items a{ display:block; padding:5px; text-decoration:none;}
