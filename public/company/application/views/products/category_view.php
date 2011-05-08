@@ -36,7 +36,9 @@
 
 </div>                
 
-<div id="main">
+<div id="main">  
+    <div class="breadcrumb">当前位置: <a href="<?php echo base_url(); ?>">首页</a> &raquo; <a href="<?php echo site_url('products'); ?>">产品中心</a> &raquo; <?php echo $current_category->name; ?></div>
+    
   <div id="products">
       <ul>
           <?php foreach($query as $item): ?>

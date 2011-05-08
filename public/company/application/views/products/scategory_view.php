@@ -36,7 +36,8 @@
 
 </div>                
 
-<div id="main">
+<div id="main"> 
+    <div class="breadcrumb">当前位置: <a href="<?php echo base_url(); ?>">首页</a> &raquo; <a href="<?php echo site_url('products'); ?>">产品中心</a> &raquo; <a href="<?php echo site_url('products/category/'.$current_root_category->id); ?>"><?php echo $current_root_category->name; ?></a> &raquo; <?php echo $current_sub_category->name; ?></div>
   <div id="products">
       <ul>
           <?php foreach($query as $item): ?>
@@ -48,6 +49,5 @@
       </ul>            
   </div><!-- end:#products -->  
   <div class="clear"></div>
-  <?php echo $this->pagination->create_links(); ?>   
-  <?php echo $total_product_count; ?>
+  <?php echo $this->pagination->create_links(); ?>
 </div>
