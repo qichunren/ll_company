@@ -9,6 +9,26 @@
 <div id="main">
     <h2 class="page_title">加入我们</h2>
     <div>
-        上海佳诚工程设备有限公司建于1996年，位于上海市普陀区金沙江路1340弄2号，是一家专业从事各种制冷设备的生产、安装、销售、售后服务为一体的中大型企业。佳诚公司主营溴化锂制冷机组、螺杆制冷机组、离心制冷机组、配套供应三洋、开利、双良、远大、乐星、联丰、荏原、深蓝等压缩机、冷剂泵、溴化锂溶液、电路板等系列配件。经营的项目主要有冷库、中央空调、速冻隧道、特殊制冷的设计、安装维修保养一条龙服务。 游戏机破解佳诚公司拥有一支技艺精良的技修队伍和雄厚的经济实力，曾获国家级“先进企业”荣誉称号。 当前，佳诚已立足于上海西南部地区，在全国享有很高的信誉。正筹备建造，开拓大规模的批发市场，力争在各个地区开办佳诚连锁店，以一流的产品与一流的服务与你携手共创新的辉煌！ 使命... 
+<H2><FONT style="FONT-SIZE: 24px">
+<P><FONT style="FONT-SIZE: 14px">本公司因业务拓展需要，现招聘职位如下：</FONT></P>
+<P><FONT style="FONT-SIZE: 14px">&nbsp;</FONT></P>
+<P><FONT style="FONT-SIZE: 14px"><B>中央空调、冷库、非标制冷设备、冷冻配件</B><B></B></FONT></P>
+<P><FONT style="FONT-SIZE: 14px">一、&nbsp;&nbsp;&nbsp; 仓管：&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;1名&nbsp;&nbsp;&nbsp;&nbsp; 空调冷冻配件五金电线仓库管理</FONT></P>
+<P><FONT style="FONT-SIZE: 14px">二、&nbsp;&nbsp;&nbsp; 收银员：&nbsp;&nbsp;&nbsp; 1名（女）</FONT></P>
+<P><FONT style="FONT-SIZE: 14px">三、&nbsp;&nbsp;&nbsp; 营业员：&nbsp;&nbsp;&nbsp; 2名（女）门市部销售</FONT></P>
+<P><FONT style="FONT-SIZE: 14px">四、&nbsp;&nbsp;&nbsp; 业务经理：3名 销售及管理空调、空气源热水器、水处理设备</FONT></P>
+<P><FONT style="FONT-SIZE: 14px">五、&nbsp;&nbsp;&nbsp; 业务员： 10名 销售：空调、空气源热水器、水处理设备</FONT></P>
+<P><FONT style="FONT-SIZE: 14px">六、&nbsp;&nbsp;&nbsp; 制冷工程师： 2名&nbsp;&nbsp; &nbsp;中央空调、冷库维修、施工</FONT></P>
+<P><FONT style="FONT-SIZE: 14px">七、&nbsp;&nbsp;&nbsp; 制冷技师：&nbsp;&nbsp; 5名&nbsp;&nbsp;&nbsp; 空调、冷库维修、施工</FONT></P>
+<P><FONT style="FONT-SIZE: 14px">八、&nbsp;&nbsp;&nbsp; 暖通设计师&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></P>
+<P><FONT style="FONT-SIZE: 14px">九、&nbsp;&nbsp;&nbsp; 水电工：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2名&nbsp;&nbsp;&nbsp; 有证</FONT></P>
+<P><FONT style="FONT-SIZE: 14px">十、&nbsp;&nbsp;&nbsp; 电焊工：&nbsp;&nbsp;&nbsp;&nbsp; 1名&nbsp;&nbsp;&nbsp; 有证</FONT></P>
+<P><FONT style="FONT-SIZE: 14px"></FONT>&nbsp;</P>
+<P><FONT style="FONT-SIZE: 14px"><B>注：请在简历上注明要求薪金，本公司因才施用。</B><B></B></FONT></P>
+<P><FONT style="FONT-SIZE: 14px">上海佳诚工程设备有限公司</FONT></P>
+<P><FONT style="FONT-SIZE: 14px">工作地点：上海金沙江路1340弄2号</FONT></P>
+<P><FONT style="FONT-SIZE: 14px">电话：021-52652192&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 传真：021-52804468</FONT></P>
+<P><FONT style="FONT-SIZE: 14px">邮箱：</FONT><A href="mailto:shjczl@yahoo.com.cn"><FONT style="FONT-SIZE: 14px">shjczl@yahoo.com.cn</FONT></A><FONT style="FONT-SIZE: 14px">&nbsp;&nbsp;&nbsp;&nbsp; 联系人：彭小姐</FONT></P></FONT></H2>
+
     </div>
 </div>
