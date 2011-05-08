@@ -37,7 +37,7 @@ class Pages extends MY_Controller {
       // $data["query"] = $this->post->get($config["per_page"], $this->uri->segment(3));
       // $this->load->view('pages/introduce_view', $data);
       
-      $this->data["page_title"] = "公司简介 － 佳诚制冷工程设备";
+      $this->data["page_title"] = "集团简介 － 佳诚制冷工程设备";
       $this->render_view("pages/introduce_view");
     }
   

@@ -23,7 +23,6 @@
       </div> 
       
       <div class="clear"></div>
-      
       <?php $this->load->view("/shared/footer"); ?>
 
   </body>
