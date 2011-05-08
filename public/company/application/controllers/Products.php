@@ -64,8 +64,10 @@ class Products extends MY_Controller {
         $this->render_view('products/show_view');
     }  
     
-    function search($id){                        
-        $data["q"] = $this->product->search($id); 
+    // 产品搜索
+    function search(){                        
+        $this->data["q"] = $this->product->search(urldecode($this->uri->segment(3))); 
+        $this->data["page_title"] = "产品搜索"; 
         $this->render_view('products/search_view');                
     }
    
