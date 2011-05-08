@@ -127,6 +127,7 @@ body{
   margin-left:10px;
 }      
 #index_latest_news h3{ border-bottom: 1px dashed #BDBDBD; margin-bottom:10px; }
+#index_latest_products h3{ border-bottom: 1px dashed #BDBDBD; margin-bottom:10px; }
 li.news {margin-bottom:6px;}
 li.news span{ display:block; float:right;}  
 

@@ -20,6 +20,11 @@ class Product_model extends CI_Model {
       //$query = $this->db->get("products", $limit, $offset);
       $query = $this->db->query("select p.id, p.name, p.image_url, p.target_url, c.name as c_name, p.created_at from products p left join pcategories c on c.id=p.pcategory_id  order by id DESC limit $offset, $limit");
       return $query->result();  
+    }    
+    
+    function get_latest($limit){
+        $query = $this->db->query("select id, name, image_url from products order by id DESC LIMIT 0, $limit");
+        return $query->result();  
     }
     
     function get_count_from_root_category($category_id){  
