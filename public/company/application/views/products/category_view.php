@@ -48,6 +48,5 @@
       </ul>            
   </div><!-- end:#products -->  
   <div class="clear"></div>
-  <?php echo $this->pagination->create_links(); ?>   
-  <?php echo $total_product_count; ?>
+  <?php echo $this->pagination->create_links(); ?>
 </div>
