@@ -7,7 +7,7 @@ a img { border: 0 none; }
 a {color: #5FA8FF;}
 
 body{
-  background-color: #FFF;
+  background-color: #ddd;
   color: #666666;  
   line-height: 23px; 
   margin:0;padding: 0;
@@ -19,7 +19,8 @@ body{
 }  
 
 #content {
-  background:#FFF; 
+  background:#FFF;      
+  padding-top: 10px;
   
   margin: 0 auto;
   width: 950px;
@@ -35,13 +36,15 @@ body{
   
 .clear {height:1px; clear:both;}
 
+
 #header{ 
   background: url(../images/header_bg.gif);
-  height: 158px;
+  height: 108px;
   margin-bottom:1px;
   
   margin: 0 auto;
   width: 950px;
+
   }
   
 #nav {
@@ -49,8 +52,7 @@ body{
   background-color: #5FA8FF;
   z-index: 333;     
   
-  margin: 0 auto; 
-  margin-bottom: 10px;
+  margin: 0 auto;
   width: 950px;
 }           
 
@@ -83,16 +85,16 @@ body{
                                 
 #footer {
   background-color: #5FA8FF;  
-  color: #FFF;       
-  
+  color: #FFF;    
+  margin: 0 auto;
+  width: 950px;
 }
 #footer .inner{
   margin-top:10px; 
   padding-top: 10px; 
   line-height: 30px;
-  text-align: right;
+  text-align: center;
   border-top: 2px solid #5FA8FF;  
-  margin: 0 auto;
   width: 950px;      
   font-size:13px;
 }       
@@ -127,9 +129,12 @@ body{
   margin-left:10px;
 }      
 #index_latest_news h3{ border-bottom: 1px dashed #BDBDBD; margin-bottom:10px; }
-#index_latest_products h3{ border-bottom: 1px dashed #BDBDBD; margin-bottom:10px; }
 li.news {margin-bottom:6px;}
 li.news span{ display:block; float:right;}  
+
+#index_latest_products h3{ border-bottom: 1px dashed #BDBDBD; margin-bottom:10px; }
+li.products {margin-bottom:6px;}
+li.products span{ display:block; float:right;}  
 
 
 /* pages page */
