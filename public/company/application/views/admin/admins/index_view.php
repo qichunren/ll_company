@@ -1,7 +1,9 @@
 <div id="rightbar">
   <div id="operation">                                             
       <a href="<?php echo site_url('/admin/admins/change_password'); ?>">修改密码</a>
-    <a href="<?php echo site_url('/admin/admins/add'); ?>">添加帐号</a>
+      <?php if($this->session->userdata('admin_login') == "admin"){ ?>
+          <a href="<?php echo site_url('/admin/admins/add'); ?>">添加帐号</a>
+      <?php } ?>
   </div>    
 </div>
 

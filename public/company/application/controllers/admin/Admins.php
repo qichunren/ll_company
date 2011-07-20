@@ -22,7 +22,11 @@ class Admins extends MY_Controller {
   	}   
   	
   	function add(){
-  	    $this->render_view("/admin/admins/add_view", "admin");
+  	    if($this->session->userdata('admin_login') == "admin"){
+  	        $this->render_view("/admin/admins/add_view", "admin");
+        }else{
+            redirect("/admin/admins");
+        }
   	}
   	
   	function create(){  

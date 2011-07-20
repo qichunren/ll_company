@@ -42,6 +42,7 @@ class Admin_model extends CI_Model {
 		
     		//set session variables
     		$this->session->set_userdata('admin_id', $row->id);
+    		$this->session->set_userdata('admin_login', $row->login);
     		$this->session->set_userdata('admin_true_name', $row->true_name);
   		
     		//update last login time
