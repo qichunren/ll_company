@@ -32,16 +32,18 @@
     </div>
     
     <script type="text/javascript">
-        document.getElementById("admin_password").value = " ";
+        //document.getElementById("admin_password").value = " ";
         document.getElementById("admin_login").focus(); 
         
         function check_form(){ 
             if(document.getElementById("admin_login").value.length == 0){
                 document.getElementById("admin_login").focus();
+                alert("请输入登录帐号!");
                 return false;
             }
             if(document.getElementById("admin_password").value.length == 0){
                 document.getElementById("admin_password").focus();
+                alert("请输入登录密码!");
                 return false;
             }
             return true;
