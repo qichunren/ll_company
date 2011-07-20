@@ -13,7 +13,7 @@ class Admins extends MY_Controller {
         $config["base_url"] = site_url("/admin/admins/index");
         $config["total_rows"] = $this->db->count_all("admins"); 
         $config['uri_segment'] = 4;
-        $config["per_page"] = "3";
+        $config["per_page"] = "10";
 
         $this->pagination->initialize($config);
 
@@ -40,9 +40,20 @@ class Admins extends MY_Controller {
         redirect("/admin/admins");   
   	}  
   	
-  	function edit(){}
+  	function edit($id){
+  	    $this->data["admin"] = $this->admin->get_by_id($id);      
+        $this->render_view('/admin/admins/edit_view', 'admin');
+  	}
   	
-  	function update(){}
+  	function update(){
+  	    $admin_data = array(
+                'login' => strip_tags($this->input->post("admin_login")),
+                'true_name' => strip_tags($this->input->post("admin_true_name")),
+                'crypted_password' => md5(strip_tags($this->input->post("admin_password")))
+            );
+        $this->admin->update(strip_tags($this->input->post("admin_id")), $admin_data); 
+      	redirect("/admin/admins");
+  	}
   	
   	function change_password($message=NULL){             
   	    $this->data["message"] = $message;

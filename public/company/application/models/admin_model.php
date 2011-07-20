@@ -24,6 +24,11 @@ class Admin_model extends CI_Model {
       return $query->result();  
     }   
     
+    function update($id, $data){
+        $this->db->where('id', $id);
+        $this->db->update('admins', $data);
+    }
+    
 	  function do_login(){
     		$sql = "SELECT id, login, true_name, crypted_password, login_count FROM admins where login=? LIMIT 1";
     		$query = $this->db->query($sql, 

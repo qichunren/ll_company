@@ -58,7 +58,6 @@ class Products extends MY_Controller {
   	function edit($id){
         $this->data["product"] = $this->product->get_by_id($id);      
         $this->render_view('/admin/products/edit_view', 'admin');
-  	    
   	}  
   	
   	function update(){   
