@@ -23,8 +23,10 @@
                <td align="center"><?php echo $admin->login_count; ?></td>  
               <td align="center"><?php echo $admin->created_at;?></td> 
               <td align="center">
+                  <?php if($this->session->userdata('admin_login') == "admin"){ ?>
                   <a href="<?php echo site_url('/admin/admins/edit/'.$admin->id); ?> ">修改</a> -
-                  <a href="<?php echo site_url('/admin/admins/delete/'.$admin->id); ?> ">删除</a>
+                  <a href="<?php echo site_url('/admin/admins/delete/'.$admin->id); ?> " title="删除帐号" onclick="return confirm('你确定要删除此帐号?');">删除</a>
+                  <?php } ?>
               </td>
           </tr>
         <?php endforeach; ?> 
