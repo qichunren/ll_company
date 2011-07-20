@@ -62,7 +62,7 @@ class News extends MY_Controller {
       // $data["query"] = $this->post->get($config["per_page"], $this->uri->segment(3));
       // $this->load->view('news/show_view', $data);
       $this->load->model("news_model", "news");
-      $this->data["news"] = $this->news->get_by_id($id);
+      $this->data["news"] = $this->news->read($id);
       $this->render_view('news/show_view');
     }
   

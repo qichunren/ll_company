@@ -14,6 +14,18 @@ class News_model extends CI_Model {
         return $query->row(); 
     }  
     
+    function read($id){
+        $sql = "SELECT news.id, news.title, news.author, news.content, news.reading_count, news.news_category_id, news.created_at FROM news where news.id=".$id." LIMIT 1";
+        $query = $this->db->query($sql);
+        $row = $query->row();
+        $this->db->update('news', 
+		    array(
+		        'reading_count'   => $row->reading_count + 1
+		     ), 
+		    array('id' => $row->id) );
+		    return $row;
+    }
+    
     function get_latest_by_category($category_id, $limit){
         $query = $this->db->query("SELECT news.id, title, news.created_at FROM news where news_category_id=$category_id  order by id DESC LIMIT 0, $limit");
         return $query->result();    
