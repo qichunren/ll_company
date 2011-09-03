@@ -61,19 +61,38 @@ class Products extends MY_Controller {
    }
 
    function edit($id){
-        $this->data["product"] = $this->product->get_by_id($id);
-        $this->render_view('/admin/products/edit_view', 'admin');
+      $this->load->library('upload');
+      $this->data["product"] = $this->product->get_by_id($id);
+      $this->render_view('/admin/products/edit_view', 'admin');
    }
 
    function update(){
-       $product_data = array(
-                'name' => strip_tags($this->input->post("product_name")),
-                'target_url' => strip_tags($this->input->post("product_target_url")),
-                'pcategory_id' => strip_tags($this->input->post("category_id")),
-                'introduce'    => $this->input->post("product_introduce")
-            );
-        $this->product->update(strip_tags($this->input->post("product_id")), $product_data);
-         redirect("/admin/products");
+      $config['upload_path'] = 'assets/uploads/products';
+      $config["file_name"] = "product".date("Y-m-d_H_i_s")."_".md5(time());
+      $config['allowed_types'] = 'gif|jpg|png';
+      $config['max_size'] = '2025';
+      $this->load->library('upload', $config);
+
+      if(! empty($_FILES['userfile']['name'])){
+         #echo "Selected".$_FILES['userfile']['name'];
+         if($this->upload->do_upload()){
+            $data = $this->upload->data();
+            $new_file_name = "assets/uploads/products/".$data["file_name"];
+             $product_data = array(
+                      'name' => strip_tags($this->input->post("product_name")),
+                      'target_url' => strip_tags($this->input->post("product_target_url")),
+                      'pcategory_id' => strip_tags($this->input->post("category_id")),
+                      'introduce'    => $this->input->post("product_introduce"),
+                      'image_url' => $new_file_name
+                  );
+            $this->product->update(strip_tags($this->input->post("product_id")), $product_data);
+            redirect("/admin/products");
+         }else{
+
+         }
+      }else{
+         #echo "No selected";
+      }
    }
 
    function delete($id){
