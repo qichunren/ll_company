@@ -24,30 +24,29 @@ class Products extends MY_Controller {
    function add(){
        $this->load->library('upload');
        $this->render_view("/admin/products/add_view", "admin");
-
    }
 
    function create(){
+       $config['upload_path'] = 'assets/uploads/products';
+       $config["file_name"] = "product".date("Y-m-d_H_i_s")."_".md5(time());
+       $config['allowed_types'] = 'gif|jpg|png';
+       $config['max_size'] = '2025';
+       $this->load->library('upload', $config);
+
        $this->load->library('form_validation');
        $this->form_validation->set_rules('product_name', '产品名称', 'required');
        $this->form_validation->set_rules('product_target_url', '链接', 'required');
 
-        if ($this->form_validation->run() == FALSE) {
-           $this->render_view("/admin/products/add_view", "admin");
-           return;
-         }
+       if ($this->form_validation->run() == FALSE) {
+          $this->render_view("/admin/products/add_view", "admin");
+          return;
+       }
 
-         $config['upload_path'] = 'assets/uploads/products';
-         $config["file_name"] = "product".date("Y-m-d_H_i_s")."_".md5(time());
-         $config['allowed_types'] = 'gif|jpg|png';
-         $config['max_size'] = '2025';
-         $this->load->library('upload', $config);
-
-        if ( ! $this->upload->do_upload()){
-            $this->add();
-        }else{
-            $upload_data = $this->upload->data();
-            $product = array(
+       if ( ! $this->upload->do_upload()){
+          $this->add();
+       }else{
+          $upload_data = $this->upload->data();
+          $product = array(
                     'name' => strip_tags($this->input->post("product_name")),
                     'target_url' => strip_tags($this->input->post("product_target_url")),
                     'pcategory_id' => strip_tags($this->input->post("category_id")),
@@ -57,7 +56,6 @@ class Products extends MY_Controller {
                 );
             $this->product->add($product);
             redirect("/admin/products");
-
         }
 
    }
