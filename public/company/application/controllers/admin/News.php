@@ -13,7 +13,7 @@ class News extends MY_Controller {
         $config["base_url"] = site_url("/admin/news/index");
         $config["total_rows"] = $this->db->count_all("news");
         $config['uri_segment'] = 4;
-        $config["per_page"] = "3";
+        $config["per_page"] = "10";
 
         $this->pagination->initialize($config);
 
