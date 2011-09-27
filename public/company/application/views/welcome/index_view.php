@@ -1,22 +1,78 @@
-<div id="sidebar">
-  <div id="recommend_products">
-    <h3>产品与业务</h3>
-    <ul>
-      <li><img src="<?php echo base_url(); ?>assets/images/product_image_1.jpg" /></li>
-    </ul>
-  </div><!-- end:recommend_products -->
-  
-  <div id="contact_info">
-      地 址： 上海金沙江路1340弄2号<br />
-      电 话： 021-52652192<br />
-      传 真： 021-52804468<br />
-      联 系 人： 何炯成（经理） <br />
-      手 机： 13901610575 <br />
-      邮 箱： jczlsb@yahoo.cn <br />
-  </div>
-</div>
+<style type="text/css">
+      /* Override some defaults */
+      html, body {
+        background-color: #eee;
+      }
+      body {
+        padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
+      }
+      .container > footer p {
+        text-align: center; /* center align it with the container */
+      }
+      .container {
+        width: 820px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
+      }
 
-<div id="main">
+      /* The white background content wrapper */
+      .content {
+        background-color: #fff;
+        padding: 20px;
+        margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+        -webkit-border-radius: 0 0 6px 6px;
+           -moz-border-radius: 0 0 6px 6px;
+                border-radius: 0 0 6px 6px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+                box-shadow: 0 1px 2px rgba(0,0,0,.15);
+      }
+
+      /* Page header tweaks */
+      .page-header {
+        background-color: #f5f5f5;
+        padding: 20px 20px 10px;
+        margin: -20px -20px 20px;
+      }
+
+      /* Styles you shouldn't keep as they are for displaying this base example only */
+      .content .span10,
+      .content .span4 {
+        min-height: 500px;
+      }
+      /* Give a quick and non-cross-browser friendly divider */
+      .content .span4 {
+        margin-left: 0;
+        padding-left: 19px;
+        border-left: 1px solid #eee;
+      }
+
+      .topbar .btn {
+        border: 0;
+      }
+
+    </style>
+<div class="page-header">
+          <h1>Page name <small>Supporting text or tagline</small></h1>
+</div>
+<div class="row">
+   <div class="span4">
+     <div id="recommend_products">
+       <h3>产品与业务</h3>
+       <ul>
+         <li><img src="<?php echo base_url(); ?>assets/images/product_image_1.jpg" /></li>
+       </ul>
+     </div><!-- end:recommend_products -->
+
+     <div id="contact_info">
+         地 址： 上海金沙江路1340弄2号<br />
+         电 话： 021-52652192<br />
+         传 真： 021-52804468<br />
+         联 系 人： 何炯成（经理） <br />
+         手 机： 13901610575 <br />
+         邮 箱： jczlsb@yahoo.cn <br />
+     </div>
+   </div><!-- End sidebar -->
+
+<div class="span10">
   <div id="index_introduce">
     <h3>集团简介</h3>
 <p>上海佳诚工程设备有限公司建于1996年，位于上海市普陀区金沙江路1340弄2号，是一家专业从事各种制冷设备的生产、安装、销售、售后服务为一体的中大型企业。</p>
@@ -24,24 +80,24 @@
 <p> 佳诚公司拥有一支技艺精良的技修队伍和雄厚的经济实力，曾获国家级“先进企业”荣誉称号。 </p>
 <p> 当前，佳诚已立足于上海西南部地区，在全国享有很高的信誉。正筹备建造，开拓大规模的批发市场，力争在各个地区开办佳诚连锁店，以一流的产品与一流的服务与你携手共创新的辉煌！</p>
 
-  </div>  
-  
+  </div>
+
   <div id="index_slider">
     <ul>
       <li></li>
-      <li></li>   
+      <li></li>
     </ul>
   </div>
 
-  
-  <div id="index_latest_news"> 
+
+  <div id="index_latest_news">
     <h3>公司新闻</h3>
-    <ul> 
+    <ul>
         <?php foreach($news as $news_item): ?>
       <li class="news">
         <div>
           <span><?php echo $news_item->created_at; ?></span>
-          <?php echo anchor("/news/show/".$news_item->id, strip_tags($news_item->title)); ?>      
+          <?php echo anchor("/news/show/".$news_item->id, strip_tags($news_item->title)); ?>
         </div>
       </li>
       <?php endforeach; ?>
@@ -57,9 +113,10 @@
                 <a  href="<?php echo site_url('/products/show/'.$item->id);?>" ><img width="150" height="100" style="" src="<?php echo base_url().$item->image_url; ?>" /></a>
                 <?php echo anchor("/products/show/".$item->id, strip_tags($item->name), "style='display:block'"); ?>
             </li>
-          <?php endforeach; ?> 
-      </ul>            
+          <?php endforeach; ?>
+      </ul>
   </div>
   <div class="clear"></div>
 
 </div>
+</div><!-- End row -->
