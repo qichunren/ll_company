@@ -5,7 +5,7 @@
     <title><?php if(!isset($page_title)){ echo "上海佳诚工程设备有限公司";}else{ echo $page_title;} ?></title>
     <meta name="Keywords" content="" />
     <meta name="Description" content="" />
-
+    <link href="<?php echo base_url(); ?>assets/stylesheets/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(); ?>assets/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
     <?php if(FALSE){ ?><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
     <?php }else{ ?>
@@ -15,14 +15,11 @@
   </head>
   <body>
       <?php $this->load->view("/shared/header"); ?>
-
-      <div class="clear"></div>
-
-      <div id="content">
+      <div class="container">
+         <div class="content">
         <?php $this->load->view($view); ?>
-      </div>
-
-      <div class="clear"></div>
+        </div>
+      </div><!-- End main container -->
       <?php $this->load->view("/shared/footer"); ?>
 
   </body>
