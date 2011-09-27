@@ -1,6 +1,7 @@
-<div id="sidebar">
+<div class="row">
+<div id="sidebar" class="span4">
     <div id="page_items">
-        <ul>                                                           
+        <ul>
            <?php $this->load->view("pages/page_items_part");?>
         </ul>
   </div>
@@ -12,9 +13,9 @@
       联 系 人： 何炯成（经理） <br />
       手 机： 13901610575 <br />
       邮 箱： jczlsb@yahoo.cn <br />
-  </div>      
+  </div>
 </div>
-<div id="main">
+<div id="main" class="span10">
     <h2 class="page_title">集团简介</h2>
     <div>
   <p>
@@ -29,3 +30,4 @@
 
     </div>
 </div>
+</div><!-- End row -->

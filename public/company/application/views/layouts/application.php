@@ -6,6 +6,7 @@
     <meta name="Keywords" content="" />
     <meta name="Description" content="" />
     <link href="<?php echo base_url(); ?>assets/stylesheets/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="<?php echo base_url(); ?>assets/stylesheets/bootstrap_overide.css" media="screen" rel="stylesheet" type="text/css" />
     <?php if(FALSE){ ?><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
     <?php }else{ ?>
        <script src="<?php echo base_url(); ?>assets/javascripts/jquery.js" ></script>

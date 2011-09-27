@@ -1,10 +1,11 @@
-<div id="sidebar">
+<div class="row">
+<div id="sidebar" class="span4">
     <div id="page_items">
         <ul>
            <?php $this->load->view("pages/page_items_part");?>
         </ul>
   </div>
-  
+
   <div id="contact_info">
       地 址： 上海金沙江路1340弄2号<br />
       电 话： 021-52652192<br />
@@ -14,9 +15,9 @@
       邮 箱： jczlsb@yahoo.cn <br />
   </div>
   <div class="clear"></div>
-      
+
 </div>
-<div id="main">
+<div id="main" class="span10">
     <h2 class="page_title">关于我们</h2>
     <div>
     <P style="TEXT-INDENT: 21pt; mso-char-indent-count: 2.0">使命和愿景</P>
@@ -32,6 +33,7 @@
 <p>佳诚企业目标：全球最优秀的冷冻配件经销商之一</p>
 
 
-    </div> 
+    </div>
     <div class="clear"></div>
 </div>
+</div><!-- End row -->
