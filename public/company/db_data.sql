@@ -33,7 +33,7 @@ CREATE TABLE `admins` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,6 +42,7 @@ CREATE TABLE `admins` (
 
 LOCK TABLES `admins` WRITE;
 /*!40000 ALTER TABLE `admins` DISABLE KEYS */;
+INSERT INTO `admins` VALUES (1,'admin','e10adc3949ba59abbe56e057f20f883e','管理员','2011-09-03 02:56:04','127.0.0.1',7,'2011-07-20 12:43:09','2011-07-20 12:43:09'),(7,'guest','e10adc3949ba59abbe56e057f20f883e','客人','2011-07-20 13:43:39',NULL,1,'2011-07-20 13:43:25',NULL);
 /*!40000 ALTER TABLE `admins` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -62,7 +63,7 @@ CREATE TABLE `news` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -71,6 +72,7 @@ CREATE TABLE `news` (
 
 LOCK TABLES `news` WRITE;
 /*!40000 ALTER TABLE `news` DISABLE KEYS */;
+INSERT INTO `news` VALUES (1,'公司开张了',1,'公司开张了, 欢迎访问。',7,'公司','2011-07-20 12:43:09','2011-07-20 12:43:09'),(2,'好消息',1,'公司开张了, 欢迎访问。',1,'公司','2011-07-20 12:43:09','2011-07-20 12:43:09');
 /*!40000 ALTER TABLE `news` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -88,7 +90,7 @@ CREATE TABLE `news_categories` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -97,6 +99,7 @@ CREATE TABLE `news_categories` (
 
 LOCK TABLES `news_categories` WRITE;
 /*!40000 ALTER TABLE `news_categories` DISABLE KEYS */;
+INSERT INTO `news_categories` VALUES (1,'公司新闻',0,'2011-07-20 12:43:09','2011-07-20 12:43:09'),(2,'行业新闻',0,'2011-07-20 12:43:09','2011-07-20 12:43:09');
 /*!40000 ALTER TABLE `news_categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -115,7 +118,7 @@ CREATE TABLE `pcategories` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -124,6 +127,7 @@ CREATE TABLE `pcategories` (
 
 LOCK TABLES `pcategories` WRITE;
 /*!40000 ALTER TABLE `pcategories` DISABLE KEYS */;
+INSERT INTO `pcategories` VALUES (1,'家电',NULL,NULL,'2011-07-20 12:43:09','2011-07-20 12:43:09'),(2,'数码',NULL,NULL,'2011-07-20 12:43:09','2011-07-20 12:43:09'),(3,'图书',NULL,NULL,'2011-07-20 12:43:09','2011-07-20 12:43:09'),(4,'电视',1,NULL,'2011-07-20 12:43:09','2011-07-20 12:43:09'),(5,'空调',1,NULL,'2011-07-20 12:43:09','2011-07-20 12:43:09'),(6,'台式电脑',2,NULL,'2011-07-20 12:43:09','2011-07-20 12:43:09'),(7,'手机',2,NULL,'2011-07-20 12:43:09','2011-07-20 12:43:09'),(8,'计算机图片',3,NULL,'2011-07-20 12:43:09','2011-07-20 12:43:09'),(9,'文学',3,NULL,'2011-07-20 12:43:09','2011-07-20 12:43:09'),(10,'畅销书',3,NULL,'2011-07-20 12:43:09','2011-07-20 12:43:09');
 /*!40000 ALTER TABLE `pcategories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -145,7 +149,7 @@ CREATE TABLE `products` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -154,6 +158,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
+INSERT INTO `products` VALUES (20,'哈哈哈12','哈哈哈合以','http://','assets/uploads/products/product2011-09-03_06_05_29_2436f281dc51e17f2a450da870eeb379.jpg',5,0,'2011-09-03 06:04:58',NULL);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -195,7 +200,7 @@ CREATE TABLE `settings` (
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `index_settings_on_setting_key` (`setting_key`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -204,6 +209,7 @@ CREATE TABLE `settings` (
 
 LOCK TABLES `settings` WRITE;
 /*!40000 ALTER TABLE `settings` DISABLE KEYS */;
+INSERT INTO `settings` VALUES (1,'company_introduce','上海佳诚工程设备有限公司建于1996年，位于上海市普陀区金沙江路1340弄2号，是一家专业从事各种制冷设备的生产、安装、销售、售后服务为一体的中大型企业。佳诚公司主营溴化锂制冷机组、螺杆制冷机组、离心制冷机组、配套供应三洋、开利、双良、远大、乐星、联丰、荏原、深蓝等压缩机、冷剂泵、溴化锂溶液、电路板等系列配件。经营的项目主要有冷库、中央空调、速冻隧道、特殊制冷的设计、安装维修保养一条龙服务。 游戏机破解佳诚公司拥有一支技艺精良的技修队伍和雄厚的经济实力，曾获国家级“先进企业”荣誉称号。 当前，佳诚已立足于上海西南部地区，在全国享有很高的信誉。正筹备建造，开拓大规模的批发市场，力争在各个地区开办佳诚连锁店，以一流的产品与一流的服务与你携手共创新的辉煌！ 使命... ','2011-07-20 12:43:09','2011-07-20 12:43:09'),(2,'analysis_code','','2011-07-20 12:43:09','2011-07-20 12:43:09'),(3,'company_name','上海佳诚工程设备有限公司','2011-07-20 12:43:09','2011-07-20 12:43:09'),(4,'company_short_name','上海佳诚','2011-07-20 12:43:09','2011-07-20 12:43:09');
 /*!40000 ALTER TABLE `settings` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -216,4 +222,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-07-20 20:39:39
+-- Dump completed on 2011-09-03 14:07:12
