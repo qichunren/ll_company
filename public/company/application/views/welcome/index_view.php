@@ -1,12 +1,14 @@
 <div class="page-header">
-          <h1>Page name <small>Supporting text or tagline</small></h1>
-</div>
+          <h1>Page slogan <small>Supporting text or tagline</small></h1>
+</div><!-- End: page-header -->
 <div class="row">
    <div class="span4">
      <div id="recommend_products">
        <h3>产品与业务</h3>
        <ul>
-         <li><img src="<?php echo base_url(); ?>assets/images/product_image_1.jpg" /></li>
+         <li>
+            <img src="<?php echo base_url(); ?>assets/images/product_image_1.jpg" />
+         </li>
        </ul>
      </div><!-- end:recommend_products -->
 
@@ -18,7 +20,7 @@
          手 机： 13901610575 <br />
          邮 箱： jczlsb@yahoo.cn <br />
      </div>
-   </div><!-- End sidebar -->
+   </div><!-- End span4 -->
 
 <div class="span10">
   <div id="index_introduce">
@@ -64,7 +66,6 @@
           <?php endforeach; ?>
       </ul>
   </div>
-  <div class="clear"></div>
 
-</div>
+</div><!-- End span10 -->
 </div><!-- End row -->
