@@ -12,7 +12,9 @@ if($_POST['step'] == 'third' ) {
          foreach ($queries as $query){
             if (strlen(trim($query)) > 0) mysql_query($query, $mysql_conn);
          }
-         header("Location: step4.php?message=" . "数据库表和数据创建好了");
+         header('Refresh: 10; url=step4.php');
+         print "数据库表和数据创建好了";
+
       } else {
          header("Location: step3.php?message=" . "数据库".$_SESSION['mysql_database'] . "不存在");
       }

@@ -79,7 +79,7 @@ if($_POST['step'] == 'first' ) {
          <div class="clearfix">
             <label for="xlInput">Mysql密码：</label>
             <div class="input">
-               <input type="text" name="mysql_password" maxlength="70" class="xlarge" value="<?php echo $_POST["mysql_password"]; ?>" />
+               <input type="password" name="mysql_password" maxlength="70" class="xlarge" value="<?php echo $_POST["mysql_password"]; ?>" />
             </div>
          </div>
 
