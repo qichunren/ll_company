@@ -1,6 +1,6 @@
-<div class="page-header">
-          <h1>Page slogan <small>Supporting text or tagline</small></h1>
-</div><!-- End: page-header -->
+<div class="slides">
+   <img src="<?php echo base_url(); ?>assets/images/slogan1.png">
+</div><!-- End: slides -->
 <div class="row">
    <div class="span4">
      <div id="recommend_products">
