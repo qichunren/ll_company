@@ -7,7 +7,10 @@
 
     <div id="product_search" style="margin-bottom:10px;">
       <h3>产品搜索</h3>
-      <form id="search_form" method="get"><input id="keywords" type="text" name="keywords" /><button type="submit">搜</button></form>
+      <form id="search_form" method="GET">
+         <input id="keywords" type="text" name="keywords" size="30" />
+         <button type="submit" class="btn">搜</button>
+      </form>
     </div>
     <script type="text/javascript">
       $(function(){
@@ -18,8 +21,8 @@
       });
     </script>
 
-  <div id="product_categories" style="border:2px solid #95CFEF">
-  <h3 style="background:#95CFEF;color:#FFF;padding:4px;">产品分类</h3>
+  <div id="product_categories" style="border: 1px solid #95CFEF">
+  <h3 style="background:#95CFEF;color:#FFF;padding:2px;">产品分类</h3>
   <div class="categories">
   <?php $categories = $this->product->get_root_categories(); ?>
   <?php foreach($categories as $category): ?>
@@ -51,7 +54,12 @@
 </div>
 
 <div id="main" class="span10">
-    <div class="breadcrumb">当前位置: <a href="<?php echo base_url(); ?>">首页</a> &raquo; <a href="<?php echo site_url('products'); ?>">产品中心</a>  </div>
+    <ul class="breadcrumb">当前位置:
+       <li>
+          <a href="<?php echo base_url(); ?>">首页</a><span class="divider">&raquo;</span>
+          <a href="<?php echo site_url('products'); ?>">产品中心</a><span class="divider">&raquo;</span>
+       </li>
+    </ul>
   <div id="products">
       <ul>
           <?php foreach($query as $item): ?>

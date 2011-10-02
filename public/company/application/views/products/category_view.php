@@ -6,7 +6,7 @@
 
     <div id="product_search" style="margin-bottom:10px;">
       <h3>产品搜索</h3>
-      <form id="search_form" method="get"><input id="keywords" type="text" name="keywords" /><button type="submit">搜</button></form>
+      <form id="search_form" method="get"><input id="keywords" type="text" name="keywords" /><button type="submit" class="btn">搜</button></form>
     </div>
     <script type="text/javascript">
       $(function(){

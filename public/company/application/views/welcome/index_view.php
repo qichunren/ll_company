@@ -32,14 +32,6 @@
 
   </div>
 
-  <div id="index_slider">
-    <ul>
-      <li></li>
-      <li></li>
-    </ul>
-  </div>
-
-
   <div id="index_latest_news">
     <h3>公司新闻</h3>
     <ul>
