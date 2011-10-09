@@ -13,3 +13,23 @@
 #product_categories .categories dl{
   margin-bottom: 0;
 }
+
+#page_items {
+  margin-right: 50px;
+  margin-bottom: 20px;
+}
+
+#page_items ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+#page_items li {
+  margin-bottom: 5px;
+}
+
+#page_items li a{
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #BDBDBD;
+}
