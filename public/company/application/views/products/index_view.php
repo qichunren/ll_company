@@ -1,6 +1,8 @@
+<!--
 <div class="page-header">
           <h1>Page name <small>Supporting text or tagline</small></h1>
-</div><!-- End page-header -->
+</div>End page-header
+-->
 
 <div class="row">
 <div id="sidebar" class="span4">
