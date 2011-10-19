@@ -1,6 +1,6 @@
-<div id="footer">
+<footer>
   <div class="inner">
       <p>版权所有：上海佳诚集团   电话:021-52500636 传真:021-52804468 </p>
       <p>  All rights Reserved 沪ICP备06010552号</p>
   </div>
-</div> 
+</footer>
