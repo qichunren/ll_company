@@ -19,13 +19,17 @@
   margin-bottom: 20px;
 }
 
+#page_items li a {
+  text-align: center;
+}
+
 #page_items ul {
   list-style-type: none;
   margin: 0;
 }
 
 #page_items li {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 #page_items li a{
