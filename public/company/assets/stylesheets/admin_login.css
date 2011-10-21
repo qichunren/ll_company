@@ -7,11 +7,12 @@ h1,h2,h3 { color: #FFF; }
 #wrapper {
   margin: 0px auto; text-align: center;
   padding-top: 200px;
+  padding-left: 50px;
   color: #FFFFFF;
 }
 
 
-#footer {margin-top:130px; font-size:90%; color:#BDBDBD;}
+#footer {margin-top:130px; padding: 50px; font-size:90%; color:#BDBDBD;}
 
 #flash_message{
   color:red;
