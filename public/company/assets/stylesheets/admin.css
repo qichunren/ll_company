@@ -1,68 +1,24 @@
-
-/* Reset css */
-ul, li { margin:0; padding:0; list-style-position: inside; list-style-type: none; }
-p {margin:0; padding:0; }
-h1, h2, h3, h4, h5, h6 {margin:0; padding:0; font-weight: normal; }
-
-body{
-  background-color: #EFEFEF;
-  color: #666666;  
-  line-height: 23px;
-}
-body{
-  margin:0;
-  padding:0;
-}    
-.clear {height:1px; clear:both;} 
-
-table {
-border-collapse:collapse; 
-border:solid #999;
-border-width:1px 0 0 1px; 
-}
-th {
-font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-color: #4f6b72;
-border-right: 1px solid #C1DAD7;
-border-bottom: 1px solid #C1DAD7;
-border-top: 1px solid #C1DAD7;
-letter-spacing: 2px;
-text-transform: uppercase;
-text-align: left;
-padding: 6px 6px 6px 12px;
-background: #CAE8EA  no-repeat;
-}
-td{
-  border-right: 1px solid #C1DAD7;
-  border-bottom: 1px solid #C1DAD7;
-  background: #fff;
-  font-size:11px;
-  padding: 6px 6px 6px 12px;
-  color: #4f6b72;
-}  
-a{ color:#45606F;}
+.container-fluid { margin-top: 90px;}
 .pagination {margin-top:10px;border-top:1px dashed #BDBDBD;font-size: 90%; font-weight:bold;  padding-top:10px;}
 .pagination a{margin-right:4px; padding:6px; border:1px solid #BDBDBD; background:#1D69EF;color:#FFF;text-decoration: none;}
-.pagination em{padding:6px; border:1px solid #1D69EF; color:#1D69EF;} 
+.pagination em{padding:6px; border:1px solid #1D69EF; color:#1D69EF;}
 
 #wrapper {padding: 3px;}
-#header {height:50px; background: #86CAEF; color:#FFF; padding:10px; border-bottom:2px solid #3FBBFF;} 
-#right_btn { float: right;} 
+#header {height:50px; background: #86CAEF; color:#FFF; padding:10px; border-bottom:2px solid #3FBBFF;}
+#right_btn { float: right;}
 #sidebar { margin-top:5px; width:170px; float: left; padding:10px; border-right: 1px solid #BDBDBD; margin-right:10px;}
 #nav {border:1px solid #3B84BF; border-top:3px solid #3B84BF; background:#95C7EF;}
 #nav li{ border-bottom: 1px dashed #BDBDBD; }
-#nav a{ display:block; padding:5px; text-decoration: none;}    
+#nav a{ display:block; padding:5px; text-decoration: none;}
 .current_tab { background:#4DA1CF; font-weight: bold; border-left: 10px solid #3B84BF; color: #FFF;}
 #nav .sub_menu { border-left: 10px solid #3B84BF; background: #FFF; font-size:90%; }
 #nav .sub_menu_a{ padding:3px;}
-#content { float:left; margin-top:10px; width:75%;padding:10px; background:#FFF;}   
 
-#rightbar {float:right;}
 
-#footer {margin-top:10px; border-top:1px solid #BDBDBD; padding:10px;}   
+footer { margin-top:10px; border-top:1px solid #BDBDBD; padding:10px; background: #BDBDBD;}
 
 
 .box { margin-top:8px; padding: 10px; border:1px solid #B5C3CF;}
-.box p {margin-bottom:5px; padding:2px; } 
-.box input.text{ width:300px; }  
+.box p {margin-bottom:5px; padding:2px; }
+.box input.text{ width:300px; }
 .box textarea.textarea{ height:80px; width:300px;}

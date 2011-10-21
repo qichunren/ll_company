@@ -66,6 +66,8 @@ echo $this->upload->display_errors();
     <p><label for="product_introduce">产品简要描述：</label><br />
         <textarea type="file" id="product_introduce" name="product_introduce" style="width:500px;height:160px;"></textarea>
     </p>
-    <button type="submit" class="btn primary">提交</button>
+    <div class="actions">
+       <button type="submit" class="btn primary">提交</button>
+    </div>
 </form>
 </div>

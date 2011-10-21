@@ -1,6 +1,3 @@
-  <div id="footer">
-      <ul>
-          <li>2011版权所有</li>
-          <li></li>
-      </ul>
-  </div><!-- end:footer -->           
+<footer>
+      <p>2011版权所有 &copy; ll_company</p>
+</footer>

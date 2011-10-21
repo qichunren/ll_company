@@ -1,11 +1,12 @@
 <h2>发布新闻</h2>
 <div class="box">
 <?php echo form_open('admin/news/create', "id='add_form'"); ?>
+<fieldset>
 <div class="clearfix">
    <label for="news_title">标题：</label>
    <div class="input">
       <input type="text" class="xxlarge" id="news_title" name="news_title" /></div>
-      </div>
+</div>
 <div class="clearfix">
    <label for="news_author">作者：</label>
    <div class="input">
@@ -24,7 +25,10 @@
     </div>
 </div>
 <p><textarea id="news_content" class="textarea" name="news_content" style="width:600px;height:400px;"></textarea></p>
+<div class="actions">
       <button type="submit" class="btn primary">提交</button>
+   </div>
+      </fieldset>
 </form>
 </div>
 

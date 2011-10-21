@@ -2,7 +2,7 @@
 
 <div class="box">
 <?php echo form_open('admin/setting/update'); ?>
-
+<fieldset>
 <div class="clearfix">
     <label for="company_name">公司名称</label>
     <div class="input">
@@ -26,5 +26,6 @@
     <div class="actions">
    <button type="submit" class="btn primary">保存</button>
    </div>
+   </fieldset>
 </form>
 </div>
