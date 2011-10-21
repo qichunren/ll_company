@@ -1,14 +1,14 @@
 <div id="rightbar">
-  <div id="operation">                                             
-      <a href="<?php echo site_url('/admin/admins/change_password'); ?>">修改密码</a>
+  <div id="operation">
+      <a href="<?php echo site_url('/admin/admins/change_password'); ?>"  class="btn">修改密码</a>
       <?php if($this->session->userdata('admin_login') == "admin"){ ?>
-          <a href="<?php echo site_url('/admin/admins/add'); ?>">添加帐号</a>
+          <a href="<?php echo site_url('/admin/admins/add'); ?>" class="btn">添加帐号</a>
       <?php } ?>
-  </div>    
+  </div>
 </div>
 
 <div id="products">
-    <table>  
+    <table>
         <tr>
             <th width="120">登录帐号</th>
              <th width="120">姓名</th>
@@ -17,11 +17,11 @@
             <th width="150" align="center"></th>
         </tr>
         <?php foreach($admins as $admin): ?>
-          <tr>                                      
+          <tr>
               <td><?php echo $admin->login; ?></td>
-              <td><?php echo $admin->true_name; ?></td>  
-               <td align="center"><?php echo $admin->login_count; ?></td>  
-              <td align="center"><?php echo $admin->created_at;?></td> 
+              <td><?php echo $admin->true_name; ?></td>
+               <td align="center"><?php echo $admin->login_count; ?></td>
+              <td align="center"><?php echo $admin->created_at;?></td>
               <td align="center">
                   <?php if($this->session->userdata('admin_login') == "admin"){ ?>
                   <a href="<?php echo site_url('/admin/admins/edit/'.$admin->id); ?> ">修改</a> -
@@ -29,9 +29,9 @@
                   <?php } ?>
               </td>
           </tr>
-        <?php endforeach; ?> 
-    </table>            
-</div><!-- end:#products --> 
+        <?php endforeach; ?>
+    </table>
+</div><!-- end:#products -->
 
 <?php echo $this->pagination->create_links(); ?>
 

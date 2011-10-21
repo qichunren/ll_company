@@ -1,24 +1,26 @@
-<h2>修改密码</h2>       
+<h2>修改密码</h2>
 <?php echo $message; ?>
 <div class="box">
 <?php echo form_open('admin/admins/save_change_password', "id='change_form'"); ?>
 <p>当前帐号：<?php echo $current_admin->login; ?></p>
 <p><label for="old_password">原密码：</label><input type="password" class="text" id="old_password" name="old_password" /></p>
 <p><label for="new_password">新密码：</label><input type="password" class="text" id="new_password" name="new_password" /></p>
-<p><label for="new_password_confirmation">确认新密码：</label><input type="password" class="text" id="new_password_confirmation" name="new_password_confirmation" /></p>    
-      <button type="submit">提交</button>
+<p><label for="new_password_confirmation">确认新密码：</label><input type="password" class="text" id="new_password_confirmation" name="new_password_confirmation" /></p>
+<div class="actions">
+      <button type="submit" class="btn primary">提交</button>
+   </div>
 </form>
-</div> 
+</div>
 
 <script type="text/javascript">
-    $(function(){ 
+    $(function(){
         $("#change_form").submit(function(){
             if($.trim($("#old_password").val())==""){
                 alert("请输入原密码");
                 $("#old_password").val("");
                 $("#old_password").focus();
                 return false;
-            } 
+            }
             if($.trim($("#new_password").val())==""){
                 alert("请输入新密码");
                 $("#new_password").focus();
@@ -35,6 +37,6 @@
                 return false;
             }
         });
-        
+
     });
 </script>
