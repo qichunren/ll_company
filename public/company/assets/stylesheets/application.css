@@ -1,3 +1,6 @@
+#index_introduce p{
+    text-indent: 28px;
+}
 #recommend_products ul{
   list-style-type: none;
   margin: 0;

@@ -1,3 +1,21 @@
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/javascripts/kindeditor/kindeditor-min.js"></script>
+<script type="text/javascript">
+    $(function(){
+
+
+        KE.show({
+                  id : 'company_introduce',
+                  resizeMode : 1,
+                  allowPreviewEmoticons : false,
+                  allowUpload : false,
+                  items : [
+                  'fontname', 'fontsize', '|', 'textcolor', 'bgcolor', 'bold', 'italic', 'underline',
+                  'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+                  'insertunorderedlist', '|', 'emoticons', 'image', 'link']
+               });
+
+    });
+</script>
 <h2>站点配置</h2>
 
 <div class="box">
