@@ -1,0 +1,1 @@
+<?php $this->smarty->display('index.html'); ?>

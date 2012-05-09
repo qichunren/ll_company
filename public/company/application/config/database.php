@@ -12,24 +12,24 @@
 | EXPLANATION OF VARIABLES
 | -------------------------------------------------------------------
 |
-|	['hostname'] The hostname of your database server.
-|	['username'] The username used to connect to the database
-|	['password'] The password used to connect to the database
-|	['database'] The name of the database you want to connect to
-|	['dbdriver'] The database type. ie: mysql.  Currently supported:
-				 mysql, mysqli, postgre, odbc, mssql, sqlite, oci8
-|	['dbprefix'] You can add an optional prefix, which will be added
-|				 to the table name when using the  Active Record class
-|	['pconnect'] TRUE/FALSE - Whether to use a persistent connection
-|	['db_debug'] TRUE/FALSE - Whether database errors should be displayed.
-|	['cache_on'] TRUE/FALSE - Enables/disables query caching
-|	['cachedir'] The path to the folder where cache files should be stored
-|	['char_set'] The character set used in communicating with the database
-|	['dbcollat'] The character collation used in communicating with the database
-|	['swap_pre'] A default table prefix that should be swapped with the dbprefix
-|	['autoinit'] Whether or not to automatically initialize the database.
-|	['stricton'] TRUE/FALSE - forces 'Strict Mode' connections
-|							- good for ensuring strict SQL while developing
+| ['hostname'] The hostname of your database server.
+| ['username'] The username used to connect to the database
+| ['password'] The password used to connect to the database
+| ['database'] The name of the database you want to connect to
+| ['dbdriver'] The database type. ie: mysql.  Currently supported:
+         mysql, mysqli, postgre, odbc, mssql, sqlite, oci8
+| ['dbprefix'] You can add an optional prefix, which will be added
+|        to the table name when using the  Active Record class
+| ['pconnect'] TRUE/FALSE - Whether to use a persistent connection
+| ['db_debug'] TRUE/FALSE - Whether database errors should be displayed.
+| ['cache_on'] TRUE/FALSE - Enables/disables query caching
+| ['cachedir'] The path to the folder where cache files should be stored
+| ['char_set'] The character set used in communicating with the database
+| ['dbcollat'] The character collation used in communicating with the database
+| ['swap_pre'] A default table prefix that should be swapped with the dbprefix
+| ['autoinit'] Whether or not to automatically initialize the database.
+| ['stricton'] TRUE/FALSE - forces 'Strict Mode' connections
+|             - good for ensuring strict SQL while developing
 |
 | The $active_group variable lets you choose which connection group to
 | make active.  By default there is only one group (the 'default' group).
@@ -44,7 +44,7 @@ $active_record = TRUE;
 
 $db['development']['hostname'] = "127.0.0.1";
 $db['development']['username'] = "root";
-$db['development']['password'] = "123456";
+$db['development']['password'] = "ntdeck";
 $db['development']['database'] = "ll_company_development";
 $db['development']['dbdriver'] = 'mysql';
 $db['development']['dbprefix'] = '';
@@ -99,7 +99,7 @@ $db['production']['char_set'] = 'utf8';
 $db['production']['dbcollat'] = 'utf8_general_ci';
 $db['production']['swap_pre'] = '';
 $db['production']['autoinit'] = TRUE;
-$db['production']['stricton'] = FALSE;   
+$db['production']['stricton'] = FALSE;
 
 }
 /* End of production mode */
