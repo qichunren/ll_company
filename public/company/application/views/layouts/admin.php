@@ -3,36 +3,68 @@
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <title>上海佳诚工程设备有限公司 后台管理</title>
-    <link href="<?php echo base_url(); ?>assets/stylesheets/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url(); ?>assets/stylesheets/admin.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://wbpreview.com/previews/WB0070A9H/css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://wbpreview.com/previews/WB0070A9H/css/bootstrap-responsive.min.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="http://wbpreview.com/previews/WB0070A9H/css/site.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="<?php echo base_url(); ?>assets/javascripts/jquery.js" type="text/javascript"></script>
     <script src="<?php echo base_url(); ?>assets/javascripts/admin.js?v=2" type="text/javascript"></script>
   </head>
-  <body>
-    <?php $this->load->view("/admin/shared/header"); ?>
-    <div class="container-fluid">
-       <div class="sidebar">
-           <div id="nav">
-             <ul class="menu">
-               <li><a <?php if($this->uri->segment(2) == 'dashboard'){ echo "class='current_tab'";} ?> href="<?php echo site_url('admin/dashboard'); ?>">首页</a></li>
-               <li><a <?php if($this->uri->segment(2) == 'news'){ echo "class='current_tab'";} ?> href="<?php echo site_url('admin/news'); ?>">新闻中心</a></li>
-               <li><a <?php if($this->uri->segment(2) == 'products'){ echo "class='current_tab'";} ?> href="<?php echo site_url('admin/products'); ?>">产品中心</a>
-                   <?php if($this->uri->segment(2) == 'products'){ ?>
-                       <ul class="sub_menu">
-                           <li><a class="sub_menu_a" href="<?php echo site_url('/admin/products/add'); ?>">发布产品</a></li>
-                           <li><a class="sub_menu_a" href="<?php echo site_url('/admin/products/categories'); ?>">产品分类</a></li>
-                       </ul>
-                   <?php } ?>
-                   </li>
-               <li><a <?php if($this->uri->segment(2) == 'setting'){ echo "class='current_tab'";} ?> href="<?php echo site_url('admin/setting'); ?>">站点设置</a></li>
-               <li><a <?php if($this->uri->segment(2) == 'admins'){ echo "class='current_tab'";} ?> href="<?php echo site_url('admin/admins'); ?>">帐号管理</a></li>
-             </ul>
-           </div>
-       </div><!-- end sidebar -->
-      <div class="content">
-        <?php $this->load->view($view); ?>
-      </div><!-- end content -->
-    </div><!-- end container-fluid -->
-    <?php $this->load->view("/admin/shared/footer"); ?>
-  </body>
+<body>
+<div class="container">
+<?php $this->load->view("/admin/shared/header"); ?>
+<div class="row">
+    <div class="span3">
+                        <div class="well" style="padding: 8px 0;">
+                            <ul class="nav nav-list">
+                                <li class="nav-header">
+                                    Akira
+                                </li>
+                                <li class="active">
+                                    <a href="index.htm"><i class="icon-white icon-home"></i> Dashboard</a>
+                                </li>
+                                <li>
+                                    <a href="projects.htm"><i class="icon-book"></i> Projects</a>
+                                </li>
+                                <li>
+                                    <a href="tasks.htm"><i class="icon-check"></i> Tasks</a>
+                                </li>
+                                <li>
+                                    <a href="messages.htm"><i class="icon-envelope"></i> Messages</a>
+                                </li>
+                                <li>
+                                    <a href="files.htm"><i class="icon-file"></i> Files</a>
+                                </li>
+                                <li>
+                                    <a href="activity.htm"><i class="icon-list-alt"></i> Activity</a>
+                                </li>
+                                <li class="nav-header">
+                                    Your Account
+                                </li>
+                                <li>
+                                    <a href="profile.htm"><i class="icon-user"></i> Profile</a>
+                                </li>
+                                <li>
+                                    <a href="settings.htm"><i class="icon-cog"></i> Settings</a>
+                                </li>
+                                <li class="divider">
+                                </li>
+                                <li>
+                                    <a href="help.htm"><i class="icon-info-sign"></i> Help</a>
+                                </li>
+                                <li class="nav-header">
+                                    Bonus Templates
+                                </li>
+                                <li>
+                                    <a href="gallery.htm"><i class="icon-picture"></i> Gallery</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+<div class="span9">
+    <?php $this->load->view($view); ?>
+</div>
+</div><!-- end row -->
+<?php $this->load->view("/admin/shared/footer"); ?>
+</div><!-- end container -->
+</body>
 </html>
